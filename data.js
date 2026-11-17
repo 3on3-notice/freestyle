@@ -62,9 +62,7 @@ window.NOTICE = {
             ["강화 재화", "포인트 또는 코인 — 재화별 성공 확률은 강화 화면에 표시됩니다."],
             ["성공하면", "레벨이 오르고 능력치가 정해진 만큼 오릅니다(무작위 아님)."],
             ["실패하면", "레벨은 그대로이고 사용한 재화만 소모됩니다."],
-            ["강화 티켓", "포인트 강화 1회를 대신하는 티켓입니다. 지급 방식은 추후 안내됩니다."] ] },
-          { type: "deadline", label: "개편 기념 포인트 강화 확률 UP", deadline: "2026-11-25T16:59:00+09:00",
-            text: "기간 동안 포인트 강화 성공 확률이 올라갑니다.", v: "11/18 – 11/25 16:59 KST" } ] },
+            ["강화 티켓", "포인트 강화 1회를 대신하는 티켓입니다. 지급 방식은 추후 안내됩니다."] ] } ] },
 
       { id: "dex", nav: "프리스타일 영상", title: "모션이 어떻게 바뀌었나요?", q: "프리스타일을 누르면 변경 전과 변경 후 영상을 나란히 볼 수 있습니다.",
         blocks: [ { type: "dex" } ] },
@@ -139,9 +137,7 @@ window.NOTICE = {
             ["Currency", "Points or Coins — the success rate for each is shown on the Enhancement screen."],
             ["Success", "Level up with fixed stat gains, not random."],
             ["Failure", "Your level stays; only the currency is used."],
-            ["Enhancement Ticket", "Replaces one Point enhancement. Details on how it is given will be announced."] ] },
-          { type: "deadline", label: "Renewal Celebration: Point Enhancement Rate UP", deadline: "2026-11-25T16:59:00+09:00",
-            text: "The success rate of Point enhancement is increased during the event.", v: "Nov. 18th – Nov. 25th 16:59 KST" } ] },
+            ["Enhancement Ticket", "Replaces one Point enhancement. Details on how it is given will be announced."] ] } ] },
 
       { id: "dex", nav: "Freestyle Videos", title: "How have the motions changed?", q: "Select a Freestyle to watch the before and after videos side by side.",
         blocks: [ { type: "dex" } ] },
