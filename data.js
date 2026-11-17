@@ -49,7 +49,7 @@ window.NOTICE = {
           { type: "facts", photo: "order", label: "순서 정하기", items: [
             ["배치", "원하는 칸에 원하는 프리스타일을 넣어 순서를 정합니다."],
             ["레벨이 높을수록", "한 프리스타일을 더 많은 칸에 넣을 수 있습니다."] ] },
-          { type: "facts", label: "경기에서 나가는 규칙", items: [
+          { type: "facts", label: "프리스타일 모션 적용 규칙", items: [
             ["순서", "사이클의 칸 순서대로 나갑니다."],
             ["페이크", "페이크를 하면 다음 칸으로 넘어갑니다."],
             ["소모", "실제로 슛을 해야 그 칸이 사용됩니다. 스킬 슛은 칸을 쓰지 않습니다."],
@@ -124,7 +124,7 @@ window.NOTICE = {
           { type: "facts", photo: "order", label: "Set Your Order", items: [
             ["Placement", "Put the Freestyles you want in the slots you want."],
             ["Higher level", "A Freestyle can be placed in more slots."] ] },
-          { type: "facts", label: "In-match rules", items: [
+          { type: "facts", label: "Freestyle Motion Rules", items: [
             ["Order", "Freestyles come out in slot order."],
             ["Fake", "A fake moves you on to the next slot."],
             ["Use", "A slot is only used when you actually shoot. Skill shots don't use slots."],
@@ -199,7 +199,7 @@ window.NOTICE = {
           { type: "facts", photo: "order", label: "順番を決める", items: [
             ["配置", "好きな枠に好きなフリースタイルを入れます。"],
             ["レベルが高いほど", "1つのフリースタイルをより多くの枠に配置できます。"] ] },
-          { type: "facts", label: "試合でのルール", items: [
+          { type: "facts", label: "フリースタイルモーション適用ルール", items: [
             ["順番", "枠の順番どおりにフリースタイルが出ます。"],
             ["フェイク", "フェイクをすると次の枠に進みます。"],
             ["使用", "実際にシュートしたときだけ枠を使います。スキルシュートでは使いません。"],

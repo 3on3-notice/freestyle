@@ -357,6 +357,10 @@ a.mi::after{content:"";position:absolute;right:17px;top:50%;width:7px;height:7px
 .gch button.on{background:var(--t1);border-color:var(--t1);color:#fff}
 .gch button.on em{color:rgba(255,255,255,.7)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:16px 10px}
+.dxh{grid-column:1/-1;display:flex;align-items:center;gap:8px;font-size:16px;font-weight:800;color:var(--t1);padding:6px 0 2px;margin:0}
+.dxh .gdot{width:10px;height:10px;margin:0}
+.dxh em{font-style:normal;font-size:13px;font-weight:600;color:var(--t3)}
+.dxh:not(:first-child){margin-top:14px;padding-top:20px;border-top:1px solid var(--line)}   /* 점프슛·레이업·덩크 칸 나눔(11/17) */
 .pet{display:flex;flex-direction:column;align-items:stretch;text-align:left;border:0;background:none;padding:0;cursor:pointer;min-width:0}
 .pet .ic{position:relative;aspect-ratio:1/1;border-radius:10px;background:var(--line2);border:1px solid transparent;display:grid;place-items:center;overflow:hidden;transition:border-color .15s,background .15s}
 .pet:hover .ic{border-color:var(--g);background:#EEF0F3}
@@ -841,7 +845,10 @@ function renderDex() {
   $("#dxg").innerHTML = ["all"].concat(ORDER).map(k =>
     `<button type="button" data-g="${k}" class="${GF === k ? "on" : ""}" aria-pressed="${GF === k}"${k === "all" ? "" : ` style="${gVars(k)}"`}>${k === "all" ? "" : '<i class="gdot"></i>'}${k === "all" ? u.all : u.grade[k]} <em>${cnt[k]}</em></button>`).join("");
   VIEW = hit.filter(i => GF === "all" || FS[i].cat === GF);
-  grid.innerHTML = VIEW.map(cardHTML).join("");
+  // '전체'일 때는 점프슛 · 레이업 · 덩크를 칸으로 나눠 제목을 붙인다(11/17 사용자 요청). 영상 이전/다음 순서도 칸 순서와 같게
+  if (GF === "all") VIEW = ORDER.flatMap(k => VIEW.filter(i => FS[i].cat === k));
+  grid.innerHTML = GF !== "all" ? VIEW.map(cardHTML).join("")
+    : ORDER.map(k => { const g = VIEW.filter(i => FS[i].cat === k); return g.length ? `<h4 class="dxh" style="${gVars(k)}"><i class="gdot"></i>${esc(u.grade[k] || "")}<em>${g.length}</em></h4>` + g.map(cardHTML).join("") : ""; }).join("");
   $("#dxn").innerHTML = `<strong>${VIEW.length}</strong>${esc(u.unit)}`;
   const e = $("#dxe"); e.hidden = VIEW.length > 0; e.textContent = u.noResult;
   $("#dxs").classList.toggle("has", !!Q);
