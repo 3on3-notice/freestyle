@@ -854,7 +854,7 @@ const vids = () => Array.from(dlgB.querySelectorAll("video"));
 function fillPet() {
   const p = FS[CUR], u = U();
   dlg.setAttribute("style", gVars(p.cat));
-  const was = p.was && (p.was[L] || p.was.kr);
+  const was = p.was && p.was[L];   // 이전 이름은 그 언어로 있을 때만
   const v = (dir, cls, cap) => `<figure class="${cls}"><video src="video/${dir}/${p.code}.mp4" muted loop playsinline autoplay preload="auto"></video><figcaption>${esc(cap)}</figcaption></figure>`;
   dlgB.innerHTML =
     `<div class="vc-top"><span class="gbadge"><i></i>${esc(u.grade[p.cat] || "")}</span>${p.isNew ? ` <span class="gbadge" style="--gd:#fff;--gb:#FF4D6D">${esc(u.isNew)}</span>` : ""}<h2 id="dlgT">${esc(petName(p))}</h2>${was ? `<p class="alt">${esc(u.was)}: ${esc(was)}</p>` : ""}</div>` +
