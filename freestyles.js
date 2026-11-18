@@ -6,14 +6,14 @@
 window.FREESTYLES = [
   { code: 30001, cat: "jump",  kr: "무릎 지옥", was: { kr: "무릎 차기" }, en: "Knee Hell", jp: "膝地獄", before: [["mid_spd", "+9.6%"], ["tp_spd", "+8%"]] },
   { code: 30002, cat: "jump",  kr: "스파이크 슛", en: "Spike Shot", jp: "スパイクシュート", before: [["mid_blk", "+1.5%"], ["tp_blk", "+1.5%"]] },
-  { code: 30003, cat: "jump",  kr: "퀵포인트1", en: "Quick Point1", jp: "クイックポイント1", before: [["mid_def", "+0.36%"], ["tp_def", "+0.18%"]], grp: "quick" },
-  { code: 30004, cat: "jump",  kr: "퀵포인트2", en: "Quick Point2", jp: "クイックポイント2", before: [["mid_def", "+0.36%"], ["tp_def", "+0.18%"]], grp: "quick" },
+  { code: 30003, cat: "jump",  kr: "퀵 포인트1", en: "Quick Point1", jp: "クイックポイント1", before: [["mid_def", "+0.36%"], ["tp_def", "+0.18%"]], grp: "quick" },
+  { code: 30004, cat: "jump",  kr: "퀵 포인트2", en: "Quick Point2", jp: "クイックポイント2", before: [["mid_def", "+0.36%"], ["tp_def", "+0.18%"]], grp: "quick" },
   { code: 30005, cat: "jump",  kr: "비하인드 슛", en: "Behind Shot", jp: "ビハインドシュート", before: [["mid_def", "+0.36%"], ["tp_def", "+0.18%"]] },
   { code: 30006, cat: "jump",  kr: "360도 스크류 슛", en: "360 Screw Shot", jp: "360スクリューショット", isNew: true },   // 한글 확정(11/18), 일본어는 임시 표기
   { code: 31001, cat: "layup", kr: "360도 레이업", en: "360 Layup", jp: "360度レイアップ", before: [["sl_blk", "+1.5%"]] },
   { code: 31002, cat: "layup", kr: "퀵 레이업", en: "Quick Layup", jp: "クイックレイアップ", before: [["sl_def", "+0.54%"]] },
   { code: 31003, cat: "layup", kr: "백패스 페이크 레이업", en: "Fake Back Pass Layup", jp: "バックパスフェイクレイアップ", before: [["sl_def", "+0.54%"]] },
-  { code: 32001, cat: "layup", kr: "에어포인트", en: "Airpoint", jp: "エアポイント", before: [["ll_blk", "+1.5%"]] },
+  { code: 32001, cat: "layup", kr: "에어포인트", en: "Air Point", jp: "エアポイント", before: [["ll_blk", "+1.5%"]] },
   { code: 32002, cat: "layup", kr: "720도 레이업", en: "720 Layup", jp: "720度レイアップ", before: [["ll_blk", "+1.5%"]] },
   { code: 32003, cat: "layup", kr: "소프트 터치", en: "Soft Touch", jp: "ソフトタッチ", before: [["ll_def", "+0.54%"]] },
   { code: 32004, cat: "layup", kr: "투핸드 레이업", en: "Two-Handed Layup", jp: "ツーハンドレイアップ", before: [["ll_blk", "+1.5%"]] },
@@ -21,7 +21,7 @@ window.FREESTYLES = [
   { code: 32006, cat: "layup", kr: "언더레그 레이업", en: "Under-the-Leg Layup", jp: "アンダーザレッグレイアップ", isNew: true },   // 한글 확정(11/18), 일본어는 임시 표기
   { code: 33001, cat: "dunk",  kr: "레이업 덩크", en: "Layup Dunk", jp: "レイアップダンク", before: [["sd_spd", "+4.8%"]] },
   { code: 33002, cat: "dunk",  kr: "투핸드 파워슬램", en: "Two-Handed Power Slam", jp: "ツーハンドパワースラム", before: [["sd_spd", "+4.8%"]] },
-  { code: 33003, cat: "dunk",  kr: "원핸드 슬램", en: "One-Handed Slam", jp: "ワンハンドスラム", before: [["sd_spd", "+4.8%"]] },
+  { code: 33003, cat: "dunk",  kr: "원핸드슬램", en: "One-Handed Slam", jp: "ワンハンドスラム", before: [["sd_spd", "+4.8%"]] },
   { code: 33004, cat: "dunk",  kr: "허니딥", en: "Honey Dip", jp: "ハニーディップ", before: [["sd_def", "+0.54%"]] },
   { code: 33005, cat: "dunk",  kr: "수박깨기", en: "Melon Smasher", jp: "メロン割り", before: [["sd_def", "+0.54%"]] },
   { code: 34001, cat: "dunk",  kr: "키스더림", en: "Kiss the Rim", jp: "キスドリム", before: [["ld_def", "+0.54%"]] },
@@ -37,21 +37,21 @@ window.FREESTYLES = [
 window.FS_STAT = {
   hold: false,   // 11/18 기획서(웹 가이드용 기획서)에 모션별 Lv.1~5 이전·이후 표가 올라와 공개. true 면 영상 창에 안 보임
   names: {
-    mid_def: { kr: "중거리 슛 수비저항", en: "Mid Range Shot Defense Resist", jp: "ミドルシュート守備抵抗" },
-    tp_def:  { kr: "3점 슛 수비저항", en: "3 Point Shot Defense Resist", jp: "3点シュート守備抵抗" },
-    mid_spd: { kr: "중거리 슛 모션빠르기", en: "Mid Range Shot Motion Speed", jp: "ミドルシュートモーション速度" },
-    tp_spd:  { kr: "3점 슛 모션빠르기", en: "3 Point Shot Motion Speed", jp: "3点シュートモーション速度" },
-    mid_blk: { kr: "중거리 슛 블록저항", en: "Mid Range Shot Block Resist", jp: "ミドルシュートブロック抵抗" },
-    tp_blk:  { kr: "3점 슛 블록저항", en: "3 Point Shot Block Resist", jp: "3点シュートブロック抵抗" },
-    sl_blk:  { kr: "골밑 레이업 블록저항", en: "Short Distance Layup Block Resist", jp: "ショートレイアップブロック抵抗" },
-    ll_blk:  { kr: "원거리 레이업 블록저항", en: "Long Distance Layup Block Resist", jp: "ロングレイアップブロック抵抗" },
-    sl_def:  { kr: "골밑 레이업 수비저항", en: "Short Distance Layup Defense Resist", jp: "ショートレイアップ守備抵抗" },
-    ll_def:  { kr: "원거리 레이업 수비저항", en: "Long Distance Layup Defense Resist", jp: "ロングレイアップ守備抵抗" },
-    sd_spd:  { kr: "골밑 덩크 모션빠르기", en: "Short Distance Dunk Motion Speed", jp: "ショートダンクモーション速度" },
-    sd_def:  { kr: "골밑 덩크 수비저항", en: "Short Distance Dunk Defense Resist", jp: "ショートダンク守備抵抗" },
-    ld_def:  { kr: "원거리 덩크 수비저항", en: "Long Distance Dunk Defense Resist", jp: "ロングダンク守備抵抗" },
-    ld_spd:  { kr: "원거리 덩크 모션빠르기", en: "Long Distance Dunk Motion Speed", jp: "ロングダンクモーション速度" },
-    ld_blk:  { kr: "원거리 덩크 블록저항", en: "Long Distance Dunk Block Resist", jp: "ロングダンクブロック抵抗" }
+    mid_def: { kr: "중거리 슛 수비 저항", en: "Mid Range Shot Defense Resist", jp: "ミドルシュート守備抵抗" },
+    tp_def:  { kr: "3점 슛 수비 저항", en: "3 Point Shot Defense Resist", jp: "3点シュート守備抵抗" },
+    mid_spd: { kr: "중거리 슛 모션 빠르기", en: "Mid Range Shot Release Speed", jp: "ミドルシュートモーション速度" },
+    tp_spd:  { kr: "3점 슛 모션 빠르기", en: "3 Point Shot Release Speed", jp: "3点シュートモーション速度" },
+    mid_blk: { kr: "중거리 슛 블록 저항", en: "Mid Range Shot Block Resist", jp: "ミドルシュートブロック抵抗" },
+    tp_blk:  { kr: "3점 슛 블록 저항", en: "3 Point Shot Block Resist", jp: "3点シュートブロック抵抗" },
+    sl_blk:  { kr: "골밑 레이업 블록 저항", en: "Short Distance Layup Block Resist", jp: "ショートレイアップブロック抵抗" },
+    ll_blk:  { kr: "원거리 레이업 블록 저항", en: "Long Distance Layup Block Resist", jp: "ロングレイアップブロック抵抗" },
+    sl_def:  { kr: "골밑 레이업 수비 저항", en: "Short Distance Layup Defense Resist", jp: "ショートレイアップ守備抵抗" },
+    ll_def:  { kr: "원거리 레이업 수비 저항", en: "Long Distance Layup Defense Resist", jp: "ロングレイアップ守備抵抗" },
+    sd_spd:  { kr: "골밑 덩크 모션 빠르기", en: "Short Distance Dunk Speed", jp: "ショートダンクモーション速度" },
+    sd_def:  { kr: "골밑 덩크 수비 저항", en: "Short Distance Dunk Defense Resist", jp: "ショートダンク守備抵抗" },
+    ld_def:  { kr: "원거리 덩크 수비 저항", en: "Long Distance Dunk Defense Resist", jp: "ロングダンク守備抵抗" },
+    ld_spd:  { kr: "원거리 덩크 모션 빠르기", en: "Long Distance Dunk Speed", jp: "ロングダンクモーション速度" },
+    ld_blk:  { kr: "원거리 덩크 블록 저항", en: "Long Distance Dunk Block Resist", jp: "ロングダンクブロック抵抗" }
   },
   /* 레벨별 표(영상 창): 출처 = 기획서 '웹 가이드용 기획서'의 이전(CHARACTER_SKILL_STATIC)·이후(밸런스 v11) 모션별·등급별 표, 11/18.
      old = 리뉴얼 전: [능력치, Lv.1 값] — Lv.N = Lv.1 값 × N (기획서 표와 같음), u = Lv.1~5 사용 횟수 */

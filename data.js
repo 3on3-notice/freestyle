@@ -14,7 +14,7 @@ window.NOTICE = {
       was: "이전 이름", replay: "처음부터 같이 보기", slow: "느리게", normal: "보통 속도",
       videoNote: "연습장에서 촬영한 미리보기 영상으로, 실제 경기 화면과 다를 수 있습니다.",
       prev: "이전", next: "다음", close: "닫기", none: "없음", photo: "사진 준비 중", mock: "개발 중 화면",
-      noResult: "찾는 프리스타일이 없습니다.", dialog: "프리스타일 영상 비교", tabs: "단원 메뉴", compareHint: "누르면 변경 전 · 후 영상", statTitle: "레벨별 능력치 · 횟수", lv: "레벨", useOld: "사용 횟수", useNew: "장착 가능 회수", statDunk: "덩크 능력치는 거리에 따라 하나만 적용됩니다. 골밑 덩크는 모션빠르기, 원거리 덩크는 수비저항입니다."
+      noResult: "찾는 프리스타일이 없습니다.", dialog: "프리스타일 영상 비교", tabs: "단원 메뉴", compareHint: "누르면 변경 전 · 후 영상", statTitle: "레벨별 능력치 · 횟수", lv: "레벨", useOld: "사용 횟수", useNew: "장착 가능 회수", statDunk: "덩크 능력치는 거리에 따라 하나만 적용됩니다. 골밑 덩크는 모션 빠르기, 원거리 덩크는 수비 저항입니다."
     },
     chapters: [
       { id: "overview", nav: "바뀌는 점", title: "프리스타일이 이렇게 바뀌어요", q: "팩 · 조각 · 티켓 없이 원하는 프리스타일을 바로 사고, 점프슛 · 레이업 · 덩크마다 원하는 순서로 장착합니다.",
@@ -96,13 +96,13 @@ window.NOTICE = {
             ["성공하면", "오른 장착 가능 회수와 능력치가 표시됩니다."],
             ["자동 닫힘", "확인을 누르지 않아도 5초 뒤 닫힙니다. '앞으로 연출 스킵'을 고르면 다음부터 연출을 건너뜁니다."] ] },
           { type: "table", label: "레벨별 능력치", text: "같은 타입이면 어떤 프리스타일이든 능력치가 같습니다. 능력치는 쌓이지 않고 지금 레벨의 값만, 그 프리스타일로 슛하는 동안에만 적용됩니다.",
-            head: ["레벨", "점프슛<br><small>중거리 슛 · 3점 슛 수비저항</small>", "레이업<br><small>골밑 · 원거리 레이업 블록저항</small>", "덩크<br><small>골밑 덩크 모션빠르기 · 원거리 덩크 수비저항</small>"],
+            head: ["레벨", "점프슛<br><small>중거리 슛 · 3점 슛 수비 저항</small>", "레이업<br><small>골밑 · 원거리 레이업 블록 저항</small>", "덩크<br><small>골밑 덩크 모션 빠르기 · 원거리 덩크 수비 저항</small>"],
             rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%"]],
-            note: ["퀵포인트1 · 2는 기존 능력치를 그대로 유지합니다(Lv.1 중거리 슛 수비저항 +0.36% · 3점 슛 수비저항 +0.18% → Lv.5 +1.8% · +0.9%).", "덩크는 거리마다 하나만 적용됩니다: 골밑 덩크는 모션빠르기, 원거리 덩크는 수비저항.", "슛 성공률은 모든 프리스타일 · 모든 레벨에서 캐릭터의 슛 성공률 그대로입니다(배율 100%)."] },
+            note: ["퀵 포인트1 · 2는 기존 능력치를 그대로 유지합니다(Lv.1 중거리 슛 수비 저항 +0.36% · 3점 슛 수비 저항 +0.18% → Lv.5 +1.8% · +0.9%).", "덩크는 거리마다 하나만 적용됩니다: 골밑 덩크는 모션 빠르기, 원거리 덩크는 수비 저항.", "슛 성공률은 모든 프리스타일 · 모든 레벨에서 캐릭터의 슛 성공률 그대로입니다(배율 100%)."] },
           { type: "table", label: "리뉴얼 전과 달라진 점 (Lv.5 기준)", text: "능력치 종류가 바뀐 프리스타일과 사용 횟수의 변화입니다.",
             head: ["프리스타일", "리뉴얼 전", "리뉴얼 후"],
-            rows: [["무릎 지옥", "중거리 슛 모션빠르기 +48% · 3점 슛 모션빠르기 +40%", "3점 슛 수비저항 +8.1% · 중거리 슛 수비저항 +8.16%"], ["레이업 덩크 · 투핸드 파워슬램 · 원핸드 슬램", "골밑 덩크 모션빠르기 +24%", "골밑 덩크 모션빠르기 +17.4%, 원거리 덩크로도 나가며 원거리 덩크 수비저항 +22.5%"], ["메테오잼 · 가위치기 · 720도 덩크", "원거리 덩크 모션빠르기 +24%", "원거리 덩크 수비저항 +22.5%, 골밑 덩크로도 나가며 골밑 덩크 모션빠르기 +17.4%"], ["사용 횟수 (모든 프리스타일)", "Lv.5 5회 (퀵포인트 4회)", "Lv.5 3칸, 모든 프리스타일 같음"]],
-            note: ["줄어든 능력치 대신 다른 능력치가 새로 붙거나 크게 올랐습니다.", "일부 레이업은 새 동작으로 블록 가능 시간이 달라졌습니다. 투핸드 레이업 · 퀵 레이업 · 소프트 터치는 길어지고 360도 레이업 · 트리플 클러치는 짧아졌으며, 블록저항이 최대 +50%까지 올랐습니다."] } ] },
+            rows: [["무릎 지옥", "중거리 슛 모션 빠르기 +48% · 3점 슛 모션 빠르기 +40%", "3점 슛 수비 저항 +8.1% · 중거리 슛 수비 저항 +8.16%"], ["레이업 덩크 · 투핸드 파워슬램 · 원핸드슬램", "골밑 덩크 모션 빠르기 +24%", "골밑 덩크 모션 빠르기 +17.4%, 원거리 덩크로도 나가며 원거리 덩크 수비 저항 +22.5%"], ["메테오잼 · 가위치기 · 720도 덩크", "원거리 덩크 모션 빠르기 +24%", "원거리 덩크 수비 저항 +22.5%, 골밑 덩크로도 나가며 골밑 덩크 모션 빠르기 +17.4%"], ["사용 횟수 (모든 프리스타일)", "Lv.5 5회 (퀵 포인트 4회)", "Lv.5 3칸, 모든 프리스타일 같음"]],
+            note: ["줄어든 능력치 대신 다른 능력치가 새로 붙거나 크게 올랐습니다.", "일부 레이업은 새 동작으로 블록 가능 시간이 달라졌습니다. 투핸드 레이업 · 퀵 레이업 · 소프트 터치는 길어지고 360도 레이업 · 트리플 클러치는 짧아졌으며, 블록 저항이 최대 +50%까지 올랐습니다."] } ] },
 
       { id: "dex", nav: "프리스타일 영상", title: "모션이 어떻게 바뀌었나요?", q: "프리스타일을 누르면 변경 전과 변경 후 영상을 나란히 볼 수 있습니다.",
         blocks: [ { type: "dex" } ] },
@@ -116,7 +116,7 @@ window.NOTICE = {
             ["능력치 · 장착 가능 회수", "이미 올려 둔 프리스타일도 새 능력치와 레벨별 새 장착 가능 회수가 적용됩니다."],
             ["남은 조각 · 티켓", "더 이상 쓸 수 없고, 매니지먼트 › 인벤토리에서 코인으로 판매할 수 있습니다: 조각 1개 500코인 · 조각 티켓 500코인 · 실버 티켓 2,000코인 · 골드 티켓 3,000코인."],
             ["가지고 있던 팩", "계속 열 수 있지만, 팩에서 나온 조각은 사용할 수 없습니다(코인으로 판매 가능)."] ],
-            note: "레벨별 능력치는 강화 단원의 표를 참고하세요." } ] },
+            note: "레벨별 능력치는 <a href=\"#enhance\">강화</a> 단원의 '레벨별 능력치' 표를 참고하세요." } ] },
 
       { id: "faq", nav: "자주 묻는 질문", title: "자주 묻는 질문", q: "문의가 많은 내용을 모았습니다.",
         blocks: [
@@ -143,14 +143,14 @@ window.NOTICE = {
       was: "Previous name", replay: "Replay together", slow: "Slow", normal: "Normal speed",
       videoNote: "Preview footage recorded in the practice court. It may differ from actual matches.",
       prev: "Previous", next: "Next", close: "Close", none: "None", photo: "Image coming soon", mock: "In development",
-      noResult: "No Freestyles found.", dialog: "Freestyle video comparison", tabs: "Sections", compareHint: "Tap for before / after", statTitle: "Stats and limits by level", lv: "Level", useOld: "Times Used", useNew: "Equip Limit", statDunk: "Only one dunk stat applies, depending on distance: Motion Speed for short distance dunks and Defense Resist for long distance dunks."
+      noResult: "No Freestyles found.", dialog: "Freestyle video comparison", tabs: "Sections", compareHint: "Tap for before / after", statTitle: "Stats and limits by level", lv: "Level", useOld: "Times Used", useNew: "Equip Limit", statDunk: "Only one dunk stat applies, depending on distance: Short Distance Dunk Speed for short distance dunks and Long Distance Dunk Defense Resist for long distance dunks."
     },
     chapters: [
       { id: "overview", nav: "What's New", title: "Here's How Freestyle Is Changing", q: "No more packs, pieces or tickets. Buy the Freestyle you want and set your own order for Jump Shot, Layup and Dunk.",
         blocks: [
           { type: "keys", items: [
             ["Buy Directly", "Pick a Freestyle and get it at Lv.1 with Coins"],
-            ["Freestyle Cycle", "A separate cycle for Jump Shot, Layup and Dunk"],
+            ["Freestyle Cycle", "A separate cycle for Jump Shot, Layup and Dunk, in any slot and order"],
             ["Level Up to Lv.5", "Enhance with Points or Coins. Your level stays even if it fails"],
             ["3 New Freestyles", "360 Screw Shot · Under-the-Leg Layup · 360 Honey Dip"] ] },
           { type: "compare", eyebrow: "AT A GLANCE", label: "Before vs After", head: ["", "Before", "After"], rows: [
@@ -158,7 +158,7 @@ window.NOTICE = {
             ["Enhancement", "Combine Pieces", "Points or Coins up to Lv.5, success rate shown on screen", "change"],
             ["Level safety", "You had to wait until the right pieces came out of packs", "Even if an enhancement fails, the level never drops and the Freestyle never disappears, so you can try again anytime", "keep"],
             ["Equipping", "Fixed order, by use count", "Place them in any slot and order in each cycle", "up"],
-            ["Layup / Dunk types", "Close and Long Range split", "One Layup cycle, one Dunk cycle", "change"],
+            ["Layup / Dunk types", "Separate Short and Long Distance motions", "One motion works at both distances", "change"],
             ["Shot fakes", "Move on to the next motion", "Don't use a slot. Only actual shots do", "change"],
             ["In-match", "–", "NOW (just used) and NEXT shown right after each shot", "up"] ] },
           { type: "facts", label: "Where to find it", items: [
@@ -205,7 +205,7 @@ window.NOTICE = {
           { type: "facts", label: "Freestyle Motion Rules", items: [
             ["Order", "Freestyles come out in slot order."],
             ["Shot fakes", "Shot fakes don't use a slot."],
-            ["Use", "A slot is only used when you actually shoot. Skill shots don't use slots."],
+            ["Use", "A slot is only used when you actually shoot. Passing or double clutching mid-shot also counts as used. Skill shots don't use slots."],
             ["After one round", "Once the last slot is used, your default motion is used and the used slots turn dark in the cycle display (the cycle doesn't repeat). In lobby practice, the cycle keeps repeating."],
             ["NOW · NEXT", "Right after each shot, the motion you just used (NOW) and the next one (NEXT) are shown at the bottom right of the screen."] ] } ] },
 
@@ -225,12 +225,12 @@ window.NOTICE = {
             ["On success", "The raised Equip Limit and stats are shown."],
             ["Closes by itself", "It closes after 5 seconds even if you don't press Confirm. Choose Skip Animation to skip it from then on."] ] },
           { type: "table", label: "Stats by level", text: "Freestyles of the same type have the same stats. Stats don't stack: only your current level applies, and only while shooting with that Freestyle.",
-            head: ["Level", "Jump Shot<br><small>Mid Range · 3 Point Shot Defense Resist</small>", "Layup<br><small>Short · Long Distance Layup Block Resist</small>", "Dunk<br><small>Short Distance Dunk Motion Speed · Long Distance Dunk Defense Resist</small>"],
+            head: ["Level", "Jump Shot<br><small>Mid Range · 3 Point Shot Defense Resist</small>", "Layup<br><small>Short · Long Distance Layup Block Resist</small>", "Dunk<br><small>Short Distance Dunk Speed · Long Distance Dunk Defense Resist</small>"],
             rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%"]],
-            note: ["Quick Point1 · 2 keep their previous stats (Lv.1 Mid Range Shot Defense Resist +0.36% · 3 Point Shot Defense Resist +0.18% → Lv.5 +1.8% · +0.9%).", "Dunks apply one stat by distance: Motion Speed for Short Distance Dunks, Defense Resist for Long Distance Dunks.", "Shot success rate is your character's own rate for every Freestyle at every level (multiplier 100%)."] },
+            note: ["Quick Point1 · 2 keep their previous stats (Lv.1 Mid Range Shot Defense Resist +0.36% · 3 Point Shot Defense Resist +0.18% → Lv.5 +1.8% · +0.9%).", "Dunks apply one stat by distance: Short Distance Dunk Speed for short distance dunks, Long Distance Dunk Defense Resist for long distance dunks.", "Shot success rate is your character's own rate for every Freestyle at every level (multiplier 100%)."] },
           { type: "table", label: "What changed from before (at Lv.5)", text: "Freestyles whose stat types changed, and the change in use count.",
             head: ["Freestyle", "Before", "After"],
-            rows: [["Knee Hell", "Mid Range Shot Motion Speed +48% · 3 Point Shot Motion Speed +40%", "3 Point Shot Defense Resist +8.1% · Mid Range Shot Defense Resist +8.16%"], ["Layup Dunk · Two-Handed Power Slam · One-Handed Slam", "Short Distance Dunk Motion Speed +24%", "Short Distance Dunk Motion Speed +17.4%, now also used for long distance dunks with Long Distance Dunk Defense Resist +22.5%"], ["Meteor Jam · Scissors Throw · 720 Dunk", "Long Distance Dunk Motion Speed +24%", "Long Distance Dunk Defense Resist +22.5%, now also used for short distance dunks with Short Distance Dunk Motion Speed +17.4%"], ["Use count (all Freestyles)", "Lv.5 5 times (Quick Point 4)", "Lv.5 3 slots, the same for every Freestyle"]],
+            rows: [["Knee Hell", "Mid Range Shot Release Speed +48% · 3 Point Shot Release Speed +40%", "3 Point Shot Defense Resist +8.1% · Mid Range Shot Defense Resist +8.16%"], ["Layup Dunk · Two-Handed Power Slam · One-Handed Slam", "Short Distance Dunk Speed +24%", "Short Distance Dunk Speed +17.4%, now also used for long distance dunks with Long Distance Dunk Defense Resist +22.5%"], ["Meteor Jam · Scissors Throw · 720 Dunk", "Long Distance Dunk Speed +24%", "Long Distance Dunk Defense Resist +22.5%, now also used for short distance dunks with Short Distance Dunk Speed +17.4%"], ["Use count (all Freestyles)", "Lv.5 5 times (Quick Point 4)", "Lv.5 3 slots, the same for every Freestyle"]],
             note: ["Where a stat went down, another stat was added or raised a lot.", "Some layups have new motions, so their block window changed. Two-Handed Layup, Quick Layup and Soft Touch got longer, while 360 Layup and Triple Clutch got shorter, and Block Resist now goes up to +50%."] } ] },
 
       { id: "dex", nav: "Freestyle Videos", title: "How have the motions changed?", q: "Select a Freestyle to watch the before and after videos side by side.",
@@ -245,7 +245,7 @@ window.NOTICE = {
             ["Stats · Equip Limit", "Freestyles you already upgraded also get the new stats and the new Equip Limit for their level."],
             ["Leftover Pieces · Tickets", "They can no longer be used. Sell them for Coins in Management › Inventory: Piece 500 Coins each · Freestyle Piece Ticket 500 · Freestyle Silver Ticket 2,000 · Freestyle Gold Ticket 3,000."],
             ["Packs you own", "You can still open them, but the pieces from them can't be used (sell them for Coins)."] ],
-            note: "See the table in Enhance for stats at each level." } ] },
+            note: "For stats at each level, see the \"Stats by level\" table in <a href=\"#enhance\">Enhance</a>." } ] },
 
       { id: "faq", nav: "FAQ", title: "FAQ", q: "Answers to frequently asked questions.",
         blocks: [
@@ -287,7 +287,7 @@ window.NOTICE = {
             ["強化", "ピース合成", "ポイントまたはコインで Lv.5 まで、成功確率は画面で確認", "change"],
             ["レベルの安心", "欲しいピースがパックから出るまで待つ必要があった", "失敗してもレベルが下がったりフリースタイルが消えたりしないので、いつでも再挑戦できる", "keep"],
             ["装着", "使用回数による固定順", "サイクルごとに好きな枠・順番に配置", "up"],
-            ["レイアップ・ダンクの区分", "ショート・ロングに分かれる", "レイアップ・ダンクそれぞれ1つのサイクル", "change"],
+            ["レイアップ・ダンクの区分", "ショート用・ロング用のモーションが別々", "1つのモーションでショート・ロング両方に対応", "change"],
             ["フェイク", "次のモーションに進む", "進まない。実際にシュートした時だけ枠を使用", "change"],
             ["試合中", "–", "シュートの直後に今（NOW）・次（NEXT）のモーションを表示", "up"] ] },
           { type: "facts", label: "どこにありますか", items: [
@@ -334,7 +334,7 @@ window.NOTICE = {
           { type: "facts", label: "フリースタイルモーション適用ルール", items: [
             ["順番", "枠の順番どおりにフリースタイルが出ます。"],
             ["フェイク", "フェイクでは次の枠に進みません。"],
-            ["使用", "実際にシュートしたときだけ枠を使います。スキルシュートでは使いません。"],
+            ["使用", "実際にシュートしたときだけ枠を使います。シュート中のパス・ダブルクラッチも使用扱いです。スキルシュートでは使いません。"],
             ["1周したら", "最後の枠を使った後は基本モーションが出て、使い終わった枠はサイクル表示で暗くなります（サイクルは繰り返しません）。ロビーの練習ではサイクルが最初から繰り返されます。"],
             ["NOW · NEXT", "シュートの直後に、今使ったモーション（NOW）と次のモーション（NEXT）が試合画面の右下に表示されます。"] ] } ] },
 
@@ -374,7 +374,7 @@ window.NOTICE = {
             ["能力値・装着可能回数", "すでに強化していたフリースタイルにも、新しい能力値とレベルごとの新しい装着可能回数が適用されます。"],
             ["残ったピース・チケット", "今後は使用できません。マネジメント › インベントリでコインに売却できます: ピース1個 500コイン・ピースチケット 500コイン・シルバーチケット 2,000コイン・ゴールドチケット 3,000コイン。"],
             ["お持ちのパック", "引き続き開封できますが、パックから出たピースは使用できません（コインに売却可能）。"] ],
-            note: "レベルごとの能力値は「強化」の表をご覧ください。" } ] },
+            note: "レベルごとの能力値は<a href=\"#enhance\">「強化」</a>の「レベル別の能力値」の表をご覧ください。" } ] },
 
       { id: "faq", nav: "よくある質問", title: "よくある質問", q: "お問い合わせの多い内容をまとめました。",
         blocks: [
