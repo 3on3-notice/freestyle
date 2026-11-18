@@ -27,17 +27,17 @@ window.NOTICE = {
           { type: "compare", eyebrow: "AT A GLANCE", label: "기존 vs 변경 한눈에 보기", head: ["구분", "기존", "변경"], rows: [
             ["얻는 방법", "실버 · 골드 · 플래티넘 팩 → 조각 → 합성", "원하는 프리스타일을 골라 코인으로 바로 구매", "up"],
             ["강화", "조각 합성", "포인트 또는 코인으로 Lv.5 까지, 화면에서 성공 확률 확인", "change"],
-            ["레벨 안전", "원하는 조각이 팩에서 나올 때까지 기다려야 성장", "실패해도 레벨이 내려가거나 프리스타일이 사라지지 않음 — 원할 때 바로 다시 도전", "keep"],
+            ["레벨 안전", "원하는 조각이 팩에서 나올 때까지 기다려야 성장", "실패해도 레벨이 내려가거나 프리스타일이 사라지지 않아 언제든 다시 도전 가능", "keep"],
             ["장착", "정해진 순서대로 모션별 사용 횟수만큼", "점프슛 · 레이업 · 덩크 사이클에 원하는 칸 · 순서로 배치", "up"],
             ["레이업 · 덩크 구분", "근거리 · 원거리 따로", "레이업 하나, 덩크 하나로 통합", "change"],
-            ["페이크", "다음 모션으로 넘어감", "넘어가지 않음 — 실제로 슛해야 칸 사용", "change"],
+            ["페이크", "다음 모션으로 넘어감", "넘어가지 않음. 실제로 슛을 해야 칸이 사용됨", "change"],
             ["경기 중 확인", "–", "슛 직후 방금 쓴 모션(NOW) · 다음 모션(NEXT) 표시", "up"] ] } ] },
 
       { id: "buy", nav: "구매", title: "프리스타일은 어떻게 얻나요?", q: "팩을 열어 조각을 모을 필요 없이, 원하는 프리스타일을 골라 바로 구매합니다.",
         blocks: [
           { type: "facts", photo: "buy", items: [
-            ["구매 가격", "Lv.1 프리스타일 32,000코인 — 모든 프리스타일이 같은 가격입니다."],
-            ["얻는 레벨", "Lv.1 — 이후 강화로 Lv.5 까지 올릴 수 있습니다."],
+            ["구매 가격", "Lv.1 프리스타일은 32,000코인이며, 모든 프리스타일이 같은 가격입니다."],
+            ["얻는 레벨", "Lv.1 로 얻고, 이후 강화로 Lv.5 까지 올릴 수 있습니다."],
             ["구매 단위", "캐릭터마다 따로 구매합니다. 지금 선택한 캐릭터가 받습니다."],
             ["없어지는 것", "프리스타일 팩 · 조각 · 티켓"] ] },
           { type: "facts", photo: "shop", label: "상점에서도 구매", items: [
@@ -130,22 +130,22 @@ window.NOTICE = {
           { type: "keys", items: [
             ["Buy Directly", "Pick a Freestyle and get it at Lv.1 with Coins"],
             ["Freestyle Cycle", "A separate cycle for Jump Shot, Layup and Dunk"],
-            ["Level Up to Lv.5", "Enhance with Points or Coins — your level stays if it fails"],
+            ["Level Up to Lv.5", "Enhance with Points or Coins. Your level stays even if it fails"],
             ["3 New Freestyles", "360 Screw Shot · Under-the-Leg Layup · 360 Honey Dip"] ] },
           { type: "compare", eyebrow: "AT A GLANCE", label: "Before vs After", head: ["", "Before", "After"], rows: [
             ["How to get", "Silver · Gold · Platinum Packs → Pieces → Combine", "Pick a Freestyle and buy it with Coins", "up"],
             ["Enhancement", "Combine Pieces", "Points or Coins up to Lv.5, success rate shown on screen", "change"],
-            ["Level safety", "You had to wait until the right pieces came out of packs", "Even if an enhancement fails, the level never drops and the Freestyle never disappears — try again whenever you like", "keep"],
+            ["Level safety", "You had to wait until the right pieces came out of packs", "Even if an enhancement fails, the level never drops and the Freestyle never disappears, so you can try again anytime", "keep"],
             ["Equipping", "Fixed order, by use count", "Place them in any slot and order in each cycle", "up"],
             ["Layup / Dunk types", "Close and Long Range split", "One Layup cycle, one Dunk cycle", "change"],
-            ["Shot fakes", "Move on to the next motion", "Don't use a slot — only shots you take do", "change"],
+            ["Shot fakes", "Move on to the next motion", "Don't use a slot. Only actual shots do", "change"],
             ["In-match", "–", "NOW (just used) and NEXT shown right after each shot", "up"] ] } ] },
 
       { id: "buy", nav: "Buy", title: "How do I get Freestyles?", q: "No need to open packs and collect pieces. Just pick the Freestyle you want.",
         blocks: [
           { type: "facts", photo: "buy", items: [
-            ["Price", "Lv.1 Freestyles cost 32,000 Coins — the same for every Freestyle."],
-            ["Starting level", "Lv.1 — enhance it up to Lv.5."],
+            ["Price", "Lv.1 Freestyles cost 32,000 Coins, the same for every Freestyle."],
+            ["Starting level", "You get it at Lv.1 and can enhance it up to Lv.5."],
             ["Per character", "Bought separately for each character. The character you have selected gets it."],
             ["Removed", "Freestyle Packs · Pieces · Tickets"] ] },
           { type: "facts", photo: "shop", label: "Buy in the Shop too", items: [
@@ -243,17 +243,17 @@ window.NOTICE = {
           { type: "compare", eyebrow: "AT A GLANCE", label: "変更前・変更後", head: ["", "変更前", "変更後"], rows: [
             ["入手方法", "シルバー・ゴールド・プラチナパック → ピース → 合成", "欲しいフリースタイルを選んでコインで購入", "up"],
             ["強化", "ピース合成", "ポイントまたはコインで Lv.5 まで、成功確率は画面で確認", "change"],
-            ["レベルの安心", "欲しいピースがパックから出るまで待つ必要があった", "失敗してもレベルが下がったりフリースタイルが消えたりしない — いつでもすぐ再挑戦", "keep"],
+            ["レベルの安心", "欲しいピースがパックから出るまで待つ必要があった", "失敗してもレベルが下がったりフリースタイルが消えたりしないので、いつでも再挑戦できる", "keep"],
             ["装着", "使用回数による固定順", "サイクルごとに好きな枠・順番に配置", "up"],
             ["レイアップ・ダンクの区分", "ショート・ロングに分かれる", "レイアップ・ダンクそれぞれ1つのサイクル", "change"],
-            ["フェイク", "次のモーションに進む", "進まない — 実際にシュートした時だけ枠を使用", "change"],
+            ["フェイク", "次のモーションに進む", "進まない。実際にシュートした時だけ枠を使用", "change"],
             ["試合中", "–", "シュートの直後に今（NOW）・次（NEXT）のモーションを表示", "up"] ] } ] },
 
       { id: "buy", nav: "購入", title: "フリースタイルはどうやって手に入れますか？", q: "パックを開けてピースを集める必要はありません。欲しいフリースタイルを選ぶだけです。",
         blocks: [
           { type: "facts", photo: "buy", items: [
-            ["購入価格", "Lv.1 フリースタイル 32,000コイン — すべてのフリースタイルが同じ価格です。"],
-            ["最初のレベル", "Lv.1 — Lv.5 まで強化できます。"],
+            ["購入価格", "Lv.1 フリースタイルは 32,000コインで、すべてのフリースタイルが同じ価格です。"],
+            ["最初のレベル", "Lv.1 で入手し、Lv.5 まで強化できます。"],
             ["キャラクターごと", "キャラクターごとに購入します。選択中のキャラクターが受け取ります。"],
             ["廃止", "フリースタイルパック・ピース・チケット"] ] },
           { type: "facts", photo: "shop", label: "ショップでも購入", items: [
