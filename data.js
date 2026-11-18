@@ -62,7 +62,7 @@ window.NOTICE = {
         blocks: [
           { type: "facts", photo: "enhance", items: [
             ["강화 비용", "포인트 강화 1회 10포인트 · 코인 강화 1회 20,000코인"],
-            ["성공 확률", "Lv.1→2 포인트 30% · 코인 20% / Lv.2→3 포인트 20% · 코인 10% / Lv.3→4 포인트 10% · 코인 3.33% / Lv.4→5 포인트 5% · 코인 1.25% (모든 프리스타일 같음)"],
+            ["성공 확률", "Lv.1→2 포인트 30% · 코인 20% / Lv.2→3 포인트 20% · 코인 10% / Lv.3→4 포인트 10% · 코인 3.3% / Lv.4→5 포인트 5% · 코인 1.3% (모든 프리스타일 같음)"],
             ["성공하면", "레벨이 오르고 능력치가 정해진 만큼 오릅니다(무작위 아님)."],
             ["실패하면", "레벨은 그대로이고 사용한 재화만 소모됩니다."],
             ["강화 티켓", "포인트 강화 1회를 대신하는 티켓이며, 성공 확률도 포인트 강화와 같습니다. 리뉴얼 전에 Lv.2 이상 프리스타일을 가지고 있던 분께 인벤토리로 지급됩니다(기존 보유자 참고)."] ] },
@@ -144,7 +144,7 @@ window.NOTICE = {
         blocks: [
           { type: "facts", photo: "enhance", items: [
             ["Cost", "Point Enhancement 10 Points · Coin Enhancement 20,000 Coins per try"],
-            ["Success rate", "Lv.1→2 Points 30% · Coins 20% / Lv.2→3 Points 20% · Coins 10% / Lv.3→4 Points 10% · Coins 3.33% / Lv.4→5 Points 5% · Coins 1.25% (same for every Freestyle)"],
+            ["Success rate", "Lv.1→2 Points 30% · Coins 20% / Lv.2→3 Points 20% · Coins 10% / Lv.3→4 Points 10% · Coins 3.3% / Lv.4→5 Points 5% · Coins 1.3% (same for every Freestyle)"],
             ["Success", "Level up with fixed stat gains, not random."],
             ["Failure", "Your level stays; only the currency is used."],
             ["Motion Enhancement Ticket", "Can be used in place of Points for one enhancement, with the same success rate. Sent to the Inventory of players who owned Lv.2+ Freestyles before the Renewal (see Current Owners)."] ] },
@@ -226,7 +226,7 @@ window.NOTICE = {
         blocks: [
           { type: "facts", photo: "enhance", items: [
             ["強化費用", "ポイント強化 1回 10ポイント・コイン強化 1回 20,000コイン"],
-            ["成功確率", "Lv.1→2 ポイント 30%・コイン 20% / Lv.2→3 ポイント 20%・コイン 10% / Lv.3→4 ポイント 10%・コイン 3.33% / Lv.4→5 ポイント 5%・コイン 1.25%（すべてのフリースタイル共通）"],
+            ["成功確率", "Lv.1→2 ポイント 30%・コイン 20% / Lv.2→3 ポイント 20%・コイン 10% / Lv.3→4 ポイント 10%・コイン 3.3% / Lv.4→5 ポイント 5%・コイン 1.3%（すべてのフリースタイル共通）"],
             ["成功すると", "レベルが上がり、能力値が決まった分だけ上がります（ランダムではありません）。"],
             ["失敗すると", "レベルはそのままで、使った通貨のみ消費されます。"],
             ["強化チケット", "ポイント強化1回の代わりに使えるチケットで、成功確率もポイント強化と同じです。リニューアル前に Lv.2 以上のフリースタイルをお持ちだった方のインベントリに配布されます（既存の所持者を参照）。"] ] },
