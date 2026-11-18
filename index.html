@@ -875,7 +875,7 @@ let CUR = -1, LIST = [], lastFocus = null, RATE = 1;
 const vids = () => Array.from(dlgB.querySelectorAll("video"));
 /* Lv.1 능력치 전·후 — 숫자는 freestyles.js 의 FS_STAT(인게임 밸런스 v11) */
 function statHTML(p, u) {
-  const S = window.FS_STAT; if (!S) return "";
+  const S = window.FS_STAT; if (!S || S.hold) return "";
   const nm = k => (S.names[k] && (S.names[k][L] || S.names[k].kr)) || k;
   const li = arr => `<ul>${(arr || []).map(r => `<li><span>${esc(nm(r[0]))}</span><em>${esc(r[1])}</em></li>`).join("")}</ul>`;
   const aft = S.after[p.grp || p.cat] || [];
