@@ -104,7 +104,7 @@ window.NOTICE = {
           { type: "table", label: "리뉴얼 전과 달라진 점 (Lv.5 기준)", text: "능력치 종류가 바뀐 프리스타일과 사용 횟수의 변화입니다.",
             head: ["프리스타일", "능력치", "리뉴얼 전", "리뉴얼 후"],
             rows: [["무릎 지옥", "중거리 슛 모션 빠르기", "+48%", "–"], ["", "3점 슛 모션 빠르기", "+40%", "–"], ["", "3점 슛 수비 저항", "–", "+8.1%"], ["", "중거리 슛 수비 저항", "–", "+8.16%"], ["레이업 덩크 · 투핸드 파워슬램 · 원핸드슬램", "골밑 덩크 모션 빠르기", "+24%", "+17.4%"], ["", "원거리 덩크 수비 저항", "–", "+22.5%"], ["메테오잼 · 가위치기 · 720도 덩크", "원거리 덩크 모션 빠르기", "+24%", "–"], ["", "원거리 덩크 수비 저항", "–", "+22.5%"], ["", "골밑 덩크 모션 빠르기", "–", "+17.4%"], ["모든 프리스타일", "Lv.5 사용 횟수", "5회 (퀵 포인트 4회)", "3칸"]],
-            note: ["리뉴얼 후 덩크는 하나의 모션이 골밑 · 원거리 모두에서 나가며, 거리에 맞는 능력치 하나가 적용됩니다.", "줄어든 능력치 대신 다른 능력치가 새로 붙거나 크게 올랐습니다.", "일부 레이업은 새 동작으로 블록 가능 시간이 달라졌습니다. 투핸드 레이업 · 퀵 레이업 · 소프트 터치는 길어지고 360도 레이업 · 트리플 클러치는 짧아졌으며, 블록 저항이 최대 +50%까지 올랐습니다."] } ] },
+            note: ["줄어든 능력치 대신 다른 능력치가 새로 붙거나 크게 올랐습니다.", "일부 레이업은 새 동작으로 블록 가능 시간이 달라졌습니다. 투핸드 레이업 · 퀵 레이업 · 소프트 터치는 길어지고 360도 레이업 · 트리플 클러치는 짧아졌으며, 블록 저항이 최대 +50%까지 올랐습니다."] } ] },
 
       { id: "dex", nav: "프리스타일 영상", title: "모션이 어떻게 바뀌었나요?", q: "프리스타일을 누르면 변경 전과 변경 후 영상을 나란히 볼 수 있습니다.",
         blocks: [ { type: "dex" } ] },
@@ -243,7 +243,7 @@ window.NOTICE = {
           { type: "table", label: "What changed from before (at Lv.5)", text: "Freestyles whose stat types changed, and the change in use count.",
             head: ["Freestyle", "Stat", "Before", "After"],
             rows: [["Knee Hell", "Mid Range Shot Release Speed", "+48%", "–"], ["", "3 Point Shot Release Speed", "+40%", "–"], ["", "3 Point Shot Defense Resist", "–", "+8.1%"], ["", "Mid Range Shot Defense Resist", "–", "+8.16%"], ["Layup Dunk · Two-Handed Power Slam · One-Handed Slam", "Short Distance Dunk Speed", "+24%", "+17.4%"], ["", "Long Distance Dunk Defense Resist", "–", "+22.5%"], ["Meteor Jam · Scissors Throw · 720 Dunk", "Long Distance Dunk Speed", "+24%", "–"], ["", "Long Distance Dunk Defense Resist", "–", "+22.5%"], ["", "Short Distance Dunk Speed", "–", "+17.4%"], ["All Freestyles", "Lv.5 use count", "5 times (Quick Point 4)", "3 slots"]],
-            note: ["After the Renewal, one dunk motion works at both short and long distance, and the stat for that distance applies.", "Where a stat went down, another stat was added or raised a lot.", "Some layups have new motions, so their block window changed. Two-Handed Layup, Quick Layup and Soft Touch got longer, while 360 Layup and Triple Clutch got shorter, and Block Resist now goes up to +50%."] } ] },
+            note: ["Where a stat went down, another stat was added or raised a lot.", "Some layups have new motions, so their block window changed. Two-Handed Layup, Quick Layup and Soft Touch got longer, while 360 Layup and Triple Clutch got shorter, and Block Resist now goes up to +50%."] } ] },
 
       { id: "dex", nav: "Freestyle Videos", title: "How have the motions changed?", q: "Select a Freestyle to watch the before and after videos side by side.",
         blocks: [ { type: "dex" } ] },
@@ -382,7 +382,7 @@ window.NOTICE = {
           { type: "table", label: "リニューアル前からの変化（Lv.5 基準）", text: "能力値の種類が変わったフリースタイルと、使用回数の変化です。",
             head: ["フリースタイル", "能力値", "リニューアル前", "リニューアル後"],
             rows: [["膝地獄", "ミドルシュートモーション速度", "+48%", "–"], ["", "3点シュートモーション速度", "+40%", "–"], ["", "3点シュート守備抵抗", "–", "+8.1%"], ["", "ミドルシュート守備抵抗", "–", "+8.16%"], ["レイアップダンク・ツーハンドパワースラム・ワンハンドスラム", "ショートダンクモーション速度", "+24%", "+17.4%"], ["", "ロングダンク守備抵抗", "–", "+22.5%"], ["メテオジャム・ハサミ打ち・720度ダンク", "ロングダンクモーション速度", "+24%", "–"], ["", "ロングダンク守備抵抗", "–", "+22.5%"], ["", "ショートダンクモーション速度", "–", "+17.4%"], ["すべてのフリースタイル", "Lv.5 の使用回数", "5回（クイックポイント 4回）", "3枠"]],
-            note: ["リニューアル後のダンクは1つのモーションがショート・ロング両方で発動し、距離に合った能力値が1つ適用されます。", "下がった能力値の代わりに、別の能力値が新しく付いたり大きく上がったりしています。", "一部のレイアップは新しいモーションになり、ブロックされうる時間が変わりました。ツーハンドレイアップ・クイックレイアップ・ソフトタッチは長く、360度レイアップ・トリプルクラッチは短くなり、ブロック抵抗は最大 +50% まで上がりました。"] } ] },
+            note: ["下がった能力値の代わりに、別の能力値が新しく付いたり大きく上がったりしています。", "一部のレイアップは新しいモーションになり、ブロックされうる時間が変わりました。ツーハンドレイアップ・クイックレイアップ・ソフトタッチは長く、360度レイアップ・トリプルクラッチは短くなり、ブロック抵抗は最大 +50% まで上がりました。"] } ] },
 
       { id: "dex", nav: "フリースタイル動画", title: "モーションはどう変わりましたか？", q: "フリースタイルを選ぶと、変更前と変更後の動画を並べて見られます。",
         blocks: [ { type: "dex" } ] },
