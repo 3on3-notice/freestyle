@@ -77,8 +77,7 @@ window.NOTICE = {
             ["강화 티켓 지급", "가지고 있던 프리스타일 1개(캐릭터별)마다 레벨에 따라 지급됩니다: Lv.2 4장 · Lv.3 12장 · Lv.4 30장 · Lv.5 60장 (Lv.1 은 없음)."],
             ["칸 수 · 능력치", "모든 프리스타일이 레벨별로 같은 칸 수를 쓰고, 레벨이 높을수록 능력치가 높습니다."],
             ["남은 조각 · 재료", "인벤토리에서 코인으로 판매할 수 있습니다."],
-            ["열지 않은 팩", "인벤토리에서 열 수 있고, 나온 조각은 코인으로 판매할 수 있습니다."],
-            ["커리어 모드 보상", "FS 골드 팩이 보상에서 빠집니다. 이미 받은 팩은 그대로 남습니다."] ],
+            ["열지 않은 팩", "인벤토리에서 열 수 있고, 나온 조각은 코인으로 판매할 수 있습니다."] ],
             note: "레벨별 능력치는 확정되면 이 칸에 추가합니다." } ] }
     ]
   },
@@ -156,8 +155,7 @@ window.NOTICE = {
             ["Enhancement Tickets", "For each Freestyle you owned (per character), by level: Lv.2 4 · Lv.3 12 · Lv.4 30 · Lv.5 60 (none for Lv.1)."],
             ["Slots · stats", "Every Freestyle uses the same number of slots per level, and higher levels give better stats."],
             ["Leftover Pieces · materials", "Sell them for Coins in your Inventory."],
-            ["Unopened Packs", "Open them in your Inventory and sell the pieces for Coins."],
-            ["Career Mode rewards", "FS Gold Packs are removed from the rewards. Packs you already received stay."] ],
+            ["Unopened Packs", "Open them in your Inventory and sell the pieces for Coins."] ],
             note: "Stats by level will be added here once confirmed." } ] }
     ]
   },
@@ -234,8 +232,7 @@ window.NOTICE = {
             ["強化チケットの配布", "お持ちだったフリースタイル1つ（キャラクターごと）につき、レベルに応じて配布: Lv.2 4枚・Lv.3 12枚・Lv.4 30枚・Lv.5 60枚（Lv.1 はなし）。"],
             ["枠の数・能力値", "すべてのフリースタイルがレベルごとに同じ枠の数を使い、レベルが高いほど能力値が上がります。"],
             ["残ったピース・素材", "インベントリでコインに売却できます。"],
-            ["未開封のパック", "インベントリで開封し、ピースをコインに売却できます。"],
-            ["キャリアモード報酬", "FSゴールドパックが報酬から外れます。すでに受け取ったパックはそのまま残ります。"] ],
+            ["未開封のパック", "インベントリで開封し、ピースをコインに売却できます。"] ],
             note: "レベル別の能力値は確定次第ここに追加します。" } ] }
     ]
   }
