@@ -241,7 +241,7 @@ a.mi::after{content:"";position:absolute;right:17px;top:50%;width:7px;height:7px
 /* ── 변경 펫 개요 (기획 PDF 구성) ── */
 .eyb{font-size:12px;font-weight:800;letter-spacing:.4px;color:var(--or);margin-bottom:2px}
 .blk h3.lg{font-size:19px;font-weight:800;letter-spacing:-.4px;margin-bottom:14px}
-.keys{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+.keys{display:grid;grid-template-columns:repeat(var(--kc,5),minmax(0,1fr));gap:10px}
 .keys li{border:1px solid var(--line);border-radius:10px;padding:14px 14px 15px;background:#FBFBFC}
 .keys .kn{display:block;font-size:13px;font-weight:800;color:var(--or)}
 .keys b{display:block;font-size:15px;margin:4px 0 2px}
@@ -783,7 +783,7 @@ const R = {
   deadline: b => `<div class="blk"><details class="fold"${!b.fold || SHOT ? " open" : ""}><summary><h3>${b.label || ""}</h3><span class="dd-badge" data-dl="${esc(b.deadline || "")}"></span>${SVG.chev}</summary><div class="fold-bd">${descHTML(b.text)}${b.v ? `<div class="dl-v">${b.v}</div>` : ""}${(b.items || []).length ? `<ul class="chips">${b.items.map(x => `<li>${x}</li>`).join("")}</ul>` : ""}${noteHTML(b.note)}</div></details></div>`,
   /* ── 변경 펫 개요(기획 PDF '펫 가이드 · 변경점 오버뷰' 10/28 구성) ── */
   // 핵심 변경점 카드 01~05
-  keys: b => `<div class="blk"><ol class="keys">${(b.items || []).map((k, i) => `<li><span class="kn">${String(i + 1).padStart(2, "0")}</span><b>${k[0]}</b><p>${k[1]}</p></li>`).join("")}</ol></div>`,
+  keys: b => `<div class="blk"><ol class="keys" style="--kc:${(b.items || []).length || 5}">${(b.items || []).map((k, i) => `<li><span class="kn">${String(i + 1).padStart(2, "0")}</span><b>${k[0]}</b><p>${k[1]}</p></li>`).join("")}</ol></div>`,
   // 기존 → 변경 흐름 두 칸 + 아래 알림
   duo: b => {
     const flow = (f, hot) => `<div class="flow">${(f || []).map((s, i, a) => `<span class="fs${hot && i === a.length - 1 ? " hot" : ""}">${s}</span>${i < a.length - 1 ? '<i class="fa">→</i>' : ""}`).join("")}</div>`;
