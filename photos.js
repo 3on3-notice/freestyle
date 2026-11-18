@@ -35,5 +35,8 @@ window.PHOTOS = {
     cap: {"kr": "강화 중 연출 화면입니다(SKIP 가능).", "en": "The enhancement animation (you can SKIP it).", "jp": "強化中の演出画面です（SKIP 可能）。"} },
   enhresult: { src: "img/enhresult.jpg?v=1118c",
     label: {"kr": "강화 결과", "en": "Enhancement Result", "jp": "強化結果"},
-    cap: {"kr": "강화 성공 화면입니다.", "en": "The screen after a successful enhancement.", "jp": "強化成功の画面です。"} }
+    cap: {"kr": "강화 성공 화면입니다.", "en": "The screen after a successful enhancement.", "jp": "強化成功の画面です。"} },
+  sell: { src: "img/sell.jpg?v=1118c",
+    label: {"kr": "인벤토리에서 판매", "en": "Sell in Inventory", "jp": "インベントリで売却"},
+    cap: {"kr": "매니지먼트 › 인벤토리에서 남은 조각 · 티켓을 골라 코인으로 판매합니다.", "en": "Pick leftover pieces and tickets in Management › Inventory and sell them for Coins.", "jp": "マネジメント › インベントリで、残ったピース・チケットを選んでコインに売却します。"} }
 };

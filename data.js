@@ -88,13 +88,27 @@ window.NOTICE = {
 
       { id: "legacy", nav: "기존 보유자", title: "가지고 있던 프리스타일은 어떻게 되나요?", q: "리뉴얼 전에 가지고 있던 프리스타일과 아이템이 어떻게 바뀌는지 안내합니다.",
         blocks: [
-          { type: "alert", text: "<b>가지고 있던 프리스타일은 레벨 그대로 새 시스템으로 옮겨집니다.</b>" },
-          { type: "facts", items: [
-            ["강화 티켓 지급", "Lv.2 이상 프리스타일 1개(캐릭터별)마다 레벨에 따라 합산해 인벤토리로 지급됩니다: Lv.2 4장 · Lv.3 12장 · Lv.4 30장 · Lv.5 60장 (Lv.1 은 없음)."],
-            ["장착 가능 회수 · 능력치", "모든 프리스타일의 레벨별 장착 가능 회수가 같아지고, 레벨에 따라 능력치가 조정됩니다."],
-            ["남은 조각 · 티켓", "판매와 사용이 끝나며, 인벤토리에서 소정의 코인으로 판매할 수 있습니다."],
+          { type: "alert", text: "<b>가지고 있던 프리스타일은 레벨 그대로 새 시스템으로 옮겨집니다.</b> Lv.2 였다면 Lv.2 로 시작해 Lv.3 부터 이어서 강화할 수 있습니다." },
+          { type: "facts", photo: "sell", items: [
+            ["강화 티켓 지급", "점검 시작 시점에 가지고 있던 Lv.2 이상 프리스타일 1개(캐릭터별)마다 레벨에 따라 합산해 지급됩니다: Lv.2 4장 · Lv.3 12장 · Lv.4 30장 · Lv.5 60장 (Lv.1 은 없음)."],
+            ["받는 곳", "인벤토리로 바로 들어가며, 알림 메일이 함께 발송됩니다."],
+            ["능력치 · 장착 가능 회수", "이미 올려 둔 프리스타일도 새 능력치와 레벨별 새 장착 가능 회수가 적용됩니다."],
+            ["남은 조각 · 티켓", "더 이상 쓸 수 없고, 매니지먼트 › 인벤토리에서 코인으로 판매할 수 있습니다: 조각 1개 500코인 · 조각 티켓 500코인 · 실버 티켓 2,000코인 · 골드 티켓 3,000코인."],
             ["가지고 있던 팩", "계속 열 수 있지만, 팩에서 나온 조각은 사용할 수 없습니다(코인으로 판매 가능)."] ],
-            note: "레벨별 능력치는 강화 단원의 표를 참고하세요." } ] }
+            note: "레벨별 능력치는 강화 단원의 표를 참고하세요." } ] },
+
+      { id: "faq", nav: "자주 묻는 질문", title: "자주 묻는 질문", q: "문의가 많은 내용을 모았습니다.",
+        blocks: [
+          { type: "faq", items: [
+            ["가지고 있던 조각은 어떻게 되나요?", "이제 프리스타일은 코인으로 바로 구매하고 강화하는 방식이라 조각은 더 이상 쓸 수 없습니다. 캐릭터별로 가지고 있던 조각은 <b>매니지먼트 › 인벤토리</b>에 표시되며, 1개당 500코인에 판매할 수 있습니다."],
+            ["리뉴얼 전에 레벨을 올려 둔 프리스타일은 보상이 있나요?", "있습니다. 점검 시작 시점에 가지고 있던 프리스타일 1개당 레벨에 따라 <b>모션 강화 티켓</b>이 인벤토리로 지급되고, 알림 메일도 함께 발송됩니다(Lv.1 0장 · Lv.2 4장 · Lv.3 12장 · Lv.4 30장 · Lv.5 60장). 티켓은 포인트 강화 1회 대신 쓸 수 있습니다."],
+            ["Lv.2 였던 프리스타일을 새 시스템에서 이어서 강화할 수 있나요?", "네. 레벨이 그대로 유지되므로 Lv.2 로 시작해 Lv.3 부터 이어서 강화하실 수 있습니다."],
+            ["가지고 있던 프리스타일에도 새 능력치가 적용되나요?", "네. 이미 올려 둔 프리스타일도 새 능력치로 바뀌고, 사이클에 넣을 수 있는 장착 가능 회수도 레벨별 새 기준으로 바뀝니다."],
+            ["강화에 실패하면 프리스타일이 사라지나요?", "아니요. 레벨이 그대로 유지됩니다."],
+            ["여러 캐릭터에서 쓰려면 어떻게 하나요?", "프리스타일은 캐릭터마다 따로 구매합니다."],
+            ["페이크를 쓰면 다음 칸으로 넘어가나요?", "아니요. 실제로 슛을 해야 그 칸이 사용됩니다."],
+            ["구매한 프리스타일이 사이클에 장착되지 않았어요.", "사이클에 빈 칸이 없으면 가지고만 있게 됩니다. 사이클에서 직접 장착해 주세요."],
+            ["더 이상 강화할 수 없다고 나와요.", "최고 레벨(Lv.5)에 도달한 프리스타일입니다. 다른 프리스타일을 선택해 주세요."] ] } ] }
     ]
   },
   en: {
@@ -182,13 +196,27 @@ window.NOTICE = {
 
       { id: "legacy", nav: "Current Owners", title: "What happens to my Freestyles?", q: "How the Freestyles and items you had before the Renewal will change.",
         blocks: [
-          { type: "alert", text: "<b>Your Freestyles move to the new system at the same level.</b>" },
-          { type: "facts", items: [
-            ["Motion Enhancement Tickets", "Granted per Lv.2+ Freestyle you owned (per character) and added up, sent to your Inventory: Lv.2 4 · Lv.3 12 · Lv.4 30 · Lv.5 60 (none for Lv.1)."],
-            ["Equip Limit · stats", "The Equip Limit at each level is the same for every Freestyle, and stats are adjusted by level."],
-            ["Leftover Pieces · Tickets", "No longer sold or used. Sell them for a set amount of Coins in your Inventory."],
+          { type: "alert", text: "<b>Your Freestyles move to the new system at their current level.</b> A Lv.2 Freestyle starts at Lv.2, and you can keep enhancing it from there." },
+          { type: "facts", photo: "sell", items: [
+            ["Motion Enhancement Tickets", "For each Lv.2+ Freestyle you owned when the maintenance began (per character), tickets are added up by level: Lv.2 4 · Lv.3 12 · Lv.4 30 · Lv.5 60 (none for Lv.1)."],
+            ["Where you get them", "Sent straight to your Inventory, with a notification mail."],
+            ["Stats · Equip Limit", "Freestyles you already upgraded also get the new stats and the new Equip Limit for their level."],
+            ["Leftover Pieces · Tickets", "They can no longer be used. Sell them for Coins in Management › Inventory: Piece 500 Coins each · Freestyle Piece Ticket 500 · Freestyle Silver Ticket 2,000 · Freestyle Gold Ticket 3,000."],
             ["Packs you own", "You can still open them, but the pieces from them can't be used (sell them for Coins)."] ],
-            note: "See the table in Enhance for stats at each level." } ] }
+            note: "See the table in Enhance for stats at each level." } ] },
+
+      { id: "faq", nav: "FAQ", title: "FAQ", q: "Answers to frequently asked questions.",
+        blocks: [
+          { type: "faq", items: [
+            ["What happens to the pieces I had?", "Freestyles are now bought and enhanced with Coins, so pieces can no longer be used. The pieces each character had are shown in <b>Management › Inventory</b>, and you can sell them for 500 Coins each."],
+            ["Do I get anything for Freestyles I upgraded before the Renewal?", "Yes. For each Freestyle you owned when the maintenance began, <b>Motion Enhancement Tickets</b> are sent to your Inventory by level, with a notification mail (Lv.1 0 · Lv.2 4 · Lv.3 12 · Lv.4 30 · Lv.5 60). Each ticket can be used in place of one Point Enhancement."],
+            ["Can I keep enhancing a Lv.2 Freestyle in the new system?", "Yes. Its level stays the same, so it starts at Lv.2 and you can enhance it from Lv.3 on."],
+            ["Do the new stats apply to Freestyles I already own?", "Yes. Freestyles you already upgraded get the new stats, and their Equip Limit also follows the new rule for each level."],
+            ["Will my Freestyle disappear if an enhancement fails?", "No. It keeps its current level."],
+            ["How do I use a Freestyle on more than one character?", "Freestyles are bought separately for each character."],
+            ["Does a fake move on to the next slot?", "No. The slot is used only when you actually shoot."],
+            ["The Freestyle I bought isn't in my Cycle.", "If there is no empty slot in your Cycle, you just own it. Equip it yourself in the Cycle."],
+            ["It says I can't enhance any further.", "That Freestyle is at the highest level (Lv.5). Please select another Freestyle."] ] } ] }
     ]
   },
   jp: {
@@ -276,13 +304,27 @@ window.NOTICE = {
 
       { id: "legacy", nav: "既存の所持者", title: "持っていたフリースタイルはどうなりますか？", q: "リニューアル前に持っていたフリースタイルとアイテムがどう変わるかをご案内します。",
         blocks: [
-          { type: "alert", text: "<b>持っていたフリースタイルは、レベルそのままで新システムに移行されます。</b>" },
-          { type: "facts", items: [
-            ["強化チケットの配布", "お持ちだった Lv.2 以上のフリースタイル1つ（キャラクターごと）につき、レベルに応じて合算し、インベントリに配布: Lv.2 4枚・Lv.3 12枚・Lv.4 30枚・Lv.5 60枚（Lv.1 はなし）。"],
-            ["装着可能回数・能力値", "すべてのフリースタイルでレベルごとの装着可能回数が同じになり、レベルに応じて能力値が調整されます。"],
-            ["残ったピース・チケット", "販売・使用は終了し、インベントリで所定のコインに売却できます。"],
+          { type: "alert", text: "<b>お持ちのフリースタイルは、レベルそのままで新しいシステムに移行されます。</b> Lv.2 だったものは Lv.2 から始まり、Lv.3 以降も続けて強化できます。" },
+          { type: "facts", photo: "sell", items: [
+            ["強化チケットの配布", "メンテナンス開始時点でお持ちだった Lv.2 以上のフリースタイル1つ（キャラクターごと）につき、レベルに応じて合算して配布: Lv.2 4枚・Lv.3 12枚・Lv.4 30枚・Lv.5 60枚（Lv.1 はなし）。"],
+            ["受け取り場所", "インベントリに直接届き、お知らせメールも送信されます。"],
+            ["能力値・装着可能回数", "すでに強化していたフリースタイルにも、新しい能力値とレベルごとの新しい装着可能回数が適用されます。"],
+            ["残ったピース・チケット", "今後は使用できません。マネジメント › インベントリでコインに売却できます: ピース1個 500コイン・ピースチケット 500コイン・シルバーチケット 2,000コイン・ゴールドチケット 3,000コイン。"],
             ["お持ちのパック", "引き続き開封できますが、パックから出たピースは使用できません（コインに売却可能）。"] ],
-            note: "レベル別の能力値は「強化」の表をご覧ください。" } ] }
+            note: "レベルごとの能力値は「強化」の表をご覧ください。" } ] },
+
+      { id: "faq", nav: "よくある質問", title: "よくある質問", q: "お問い合わせの多い内容をまとめました。",
+        blocks: [
+          { type: "faq", items: [
+            ["持っていたピースはどうなりますか？", "フリースタイルはコインで直接購入・強化する方式になったため、ピースは使用できなくなりました。キャラクターごとにお持ちのピースは<b>マネジメント › インベントリ</b>に表示され、1個500コインで売却できます。"],
+            ["リニューアル前にレベルを上げていたフリースタイルに補償はありますか？", "あります。メンテナンス開始時点でお持ちのフリースタイル1つにつき、レベルに応じて<b>モーション強化チケット</b>がインベントリに配布され、お知らせメールも送信されます（Lv.1 0枚・Lv.2 4枚・Lv.3 12枚・Lv.4 30枚・Lv.5 60枚）。チケットはポイント強化1回の代わりに使えます。"],
+            ["Lv.2 だったフリースタイルは新システムで続けて強化できますか？", "はい。レベルはそのまま維持されるので、Lv.2 から始まり Lv.3 以降も続けて強化できます。"],
+            ["お持ちのフリースタイルにも新しい能力値が適用されますか？", "はい。すでに強化していたフリースタイルも新しい能力値になり、サイクルに入れられる装着可能回数もレベルごとの新しい基準に変わります。"],
+            ["強化に失敗するとフリースタイルは消えますか？", "いいえ。レベルはそのまま維持されます。"],
+            ["複数のキャラクターで使うには？", "フリースタイルはキャラクターごとに購入します。"],
+            ["フェイクを使うと次の枠に進みますか？", "いいえ。実際にシュートしたときだけ、その枠が使われます。"],
+            ["購入したフリースタイルがサイクルに装着されていません。", "サイクルに空き枠がない場合は所持のみとなります。サイクルで直接装着してください。"],
+            ["これ以上強化できないと表示されます。", "最高レベル（Lv.5）に達したフリースタイルです。別のフリースタイルを選んでください。"] ] } ] }
     ]
   }
 };
