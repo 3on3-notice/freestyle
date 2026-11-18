@@ -27,7 +27,7 @@ window.NOTICE = {
           { type: "compare", eyebrow: "AT A GLANCE", label: "기존 vs 변경 한눈에 보기", head: ["구분", "기존", "변경"], rows: [
             ["얻는 방법", "실버 · 골드 · 플래티넘 팩 → 조각 → 합성", "원하는 프리스타일을 골라 코인으로 바로 구매", "up"],
             ["강화", "조각 합성", "포인트 또는 코인으로 Lv.5 까지, 화면에서 성공 확률 확인", "up"],
-            ["강화 실패", "–", "레벨 유지, 사용한 재화만 소모"],
+            ["레벨 안전", "원하는 조각이 팩에서 나올 때까지 기다려야 성장", "실패해도 레벨이 내려가거나 프리스타일이 사라지지 않음 — 원할 때 바로 다시 도전", "up"],
             ["장착", "정해진 순서대로 모션별 사용 횟수만큼", "점프슛 · 레이업 · 덩크 사이클에 원하는 칸 · 순서로 배치", "up"],
             ["레이업 · 덩크 구분", "근거리 · 원거리 따로", "레이업 하나, 덩크 하나로 통합"],
             ["페이크", "다음 모션으로 넘어감", "넘어가지 않음 — 실제로 슛해야 칸 사용"],
@@ -135,7 +135,7 @@ window.NOTICE = {
           { type: "compare", eyebrow: "AT A GLANCE", label: "Before vs After", head: ["", "Before", "After"], rows: [
             ["How to get", "Silver · Gold · Platinum Packs → Pieces → Combine", "Pick a Freestyle and buy it with Coins", "up"],
             ["Enhancement", "Combine Pieces", "Points or Coins up to Lv.5, success rate shown on screen", "up"],
-            ["Failed enhancement", "–", "Level stays, only the currency is used"],
+            ["Level safety", "You had to wait until the right pieces came out of packs", "Even if an enhancement fails, the level never drops and the Freestyle never disappears — try again whenever you like", "up"],
             ["Equipping", "Fixed order, by use count", "Place them in any slot and order in each cycle", "up"],
             ["Layup / Dunk types", "Close and Long Range split", "One Layup cycle, one Dunk cycle"],
             ["Shot fakes", "Move on to the next motion", "Don't use a slot — only shots you take do"],
@@ -243,7 +243,7 @@ window.NOTICE = {
           { type: "compare", eyebrow: "AT A GLANCE", label: "変更前・変更後", head: ["", "変更前", "変更後"], rows: [
             ["入手方法", "シルバー・ゴールド・プラチナパック → ピース → 合成", "欲しいフリースタイルを選んでコインで購入", "up"],
             ["強化", "ピース合成", "ポイントまたはコインで Lv.5 まで、成功確率は画面で確認", "up"],
-            ["強化失敗", "–", "レベルはそのまま、使った通貨のみ消費"],
+            ["レベルの安心", "欲しいピースがパックから出るまで待つ必要があった", "失敗してもレベルが下がったりフリースタイルが消えたりしない — いつでもすぐ再挑戦", "up"],
             ["装着", "使用回数による固定順", "サイクルごとに好きな枠・順番に配置", "up"],
             ["レイアップ・ダンクの区分", "ショート・ロングに分かれる", "レイアップ・ダンクそれぞれ1つのサイクル"],
             ["フェイク", "次のモーションに進む", "進まない — 実際にシュートした時だけ枠を使用"],
