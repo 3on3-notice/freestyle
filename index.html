@@ -538,6 +538,22 @@ a.mi::after{content:"";position:absolute;right:17px;top:50%;width:7px;height:7px
 .vc-ctl button:hover{background:#FAFBFC}
 .vc-ctl button[aria-pressed="true"]{background:var(--t1);border-color:var(--t1);color:#fff}
 .vc-note{font-size:12.5px;color:var(--t3);margin-top:10px}
+/* 영상 창 Lv.1 능력치 전·후 (11/18) */
+.vst{margin-top:14px;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.vst h3{font-size:14px;font-weight:700;padding:10px 14px;background:#F9FAFB;border-bottom:1px solid var(--line);margin:0}
+.vst-g{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+.vst-g.one{grid-template-columns:minmax(0,1fr)}
+.vst-c{padding:10px 14px}
+.vst-c+.vst-c{border-left:1px solid var(--line)}
+.vst-c>b{display:block;font-size:12px;font-weight:700;color:var(--t3);margin-bottom:6px}
+.vst-c.aft>b{color:var(--or-d)}
+.vst-c ul{list-style:none;margin:0;padding:0}
+.vst-c li{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;line-height:1.5;padding:3px 0}
+.vst-c li span{color:var(--t2)}
+.vst-c li em{font-style:normal;font-weight:700;white-space:nowrap}
+.vst-c.aft li em{color:var(--or-d)}
+.vst-n{font-size:12px;color:var(--t3);padding:8px 14px;border-top:1px solid var(--line2)}
+@media (max-width:520px){.vst-g{grid-template-columns:minmax(0,1fr)}.vst-c+.vst-c{border-left:0;border-top:1px solid var(--line)}}
 .vc-new{font-size:13.5px;color:var(--t2);margin-top:10px}
 @media (max-width:759px){
   .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
@@ -857,6 +873,18 @@ function renderDex() {
 const ov = $("#ov"), dlg = $("#dlg"), dlgB = $("#dlgB"), btnP = $("#dlgP"), btnN = $("#dlgNx");
 let CUR = -1, LIST = [], lastFocus = null, RATE = 1;
 const vids = () => Array.from(dlgB.querySelectorAll("video"));
+/* Lv.1 능력치 전·후 — 숫자는 freestyles.js 의 FS_STAT(인게임 밸런스 v11) */
+function statHTML(p, u) {
+  const S = window.FS_STAT; if (!S) return "";
+  const nm = k => (S.names[k] && (S.names[k][L] || S.names[k].kr)) || k;
+  const li = arr => `<ul>${(arr || []).map(r => `<li><span>${esc(nm(r[0]))}</span><em>${esc(r[1])}</em></li>`).join("")}</ul>`;
+  const aft = S.after[p.grp || p.cat] || [];
+  const bef = p.isNew ? null : p.before;
+  return `<section class="vst"><h3>${esc(u.statTitle || "Lv.1")}</h3><div class="vst-g${bef ? "" : " one"}">` +
+    (bef ? `<div class="vst-c bef"><b>${esc(u.before)}</b>${li(bef)}</div>` : "") +
+    `<div class="vst-c aft"><b>${esc(u.after)}</b>${li(aft)}</div></div>` +
+    (u.statNote ? `<p class="vst-n">${esc(u.statNote)}</p>` : "") + `</section>`;
+}
 function fillPet() {
   const p = FS[CUR], u = U();
   dlg.setAttribute("style", gVars(p.cat));
@@ -868,6 +896,7 @@ function fillPet() {
       ? `<div class="vc one">${v("after", "aft", u.after)}</div><p class="vc-new">${esc(u.newOnly)}</p>`
       : `<div class="vc">${v("before", "bef", u.before)}${v("after", "aft", u.after)}</div>`) +
     `<div class="vc-ctl"><button type="button" data-vc="replay">${esc(u.replay)}</button><button type="button" data-vc="slow" aria-pressed="${RATE < 1}">${esc(RATE < 1 ? u.normal : u.slow)}</button></div>` +
+    statHTML(p, u) +
     (u.videoNote ? `<p class="vc-note">※ ${esc(u.videoNote)}</p>` : "");
   vids().forEach(x => { x.playbackRate = RATE; if (SHOT) { x.removeAttribute("autoplay"); x.currentTime = 1.5; } });
   const k = LIST.indexOf(CUR);
