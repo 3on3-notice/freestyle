@@ -25,15 +25,15 @@ window.FREESTYLES = [
   { code: 33004, cat: "dunk",  kr: "허니딥", en: "Honey Dip", jp: "ハニーディップ", before: [["sd_def", "+0.54%"]] },
   { code: 33005, cat: "dunk",  kr: "수박깨기", en: "Melon Smasher", jp: "メロン割り", before: [["sd_def", "+0.54%"]] },
   { code: 34001, cat: "dunk",  kr: "키스더림", en: "Kiss the Rim", jp: "キスドリム", before: [["ld_def", "+0.54%"]] },
-  { code: 34002, cat: "dunk",  kr: "메테오잼", en: "Meteor Jam", jp: "メテオジャム", before: [["ld_spd", "+4.8%"]] },
-  { code: 34003, cat: "dunk",  kr: "가위치기", en: "Scissors Throw", jp: "ハサミ打ち", before: [["ld_spd", "+4.8%"]] },
+  { code: 34002, cat: "dunk",  kr: "메테오잼", en: "Meteor Jam", jp: "メテオジャム", before: [["ld_spd", "+6.6%"]] },
+  { code: 34003, cat: "dunk",  kr: "가위치기", en: "Scissors Throw", jp: "ハサミ打ち", before: [["ld_spd", "+6.6%"]] },
   { code: 34004, cat: "dunk",  kr: "함정카드", en: "Trap Card", jp: "罠カード", before: [["ld_blk", "+1.5%"]] },
-  { code: 34005, cat: "dunk",  kr: "720도 덩크", en: "720 Dunk", jp: "720度ダンク", before: [["ld_spd", "+4.8%"]] },
+  { code: 34005, cat: "dunk",  kr: "720도 덩크", en: "720 Dunk", jp: "720度ダンク", before: [["ld_spd", "+6.6%"]] },
   { code: 34006, cat: "dunk",  kr: "360도 허니딥", en: "360 Honey Dip", jp: "360ハニーディップ", isNew: true }   // 한글 확정(11/18), 일본어는 임시 표기
 ];
 
 /* 능력치(화면 표시값) — 출처: 기획서 「인게임 밸런스」 v11(2026-11-17), 이름은 게임 텍스트(텍스트 참조: 중거리 슛·3점 슛·골밑/원거리 레이업·덩크 + 수비저항·블록저항·모션빠르기).
-   before = 개편 전 Lv.1 (위 목록의 각 모션), after = 개편 후 Lv.1 (같은 타입이면 모두 같음, 퀵포인트1·2만 기존 유지) */
+   before = 개편 전 Lv.1 (위 목록의 각 모션; 원거리 덩크 모션빠르기 336 은 게임 화면 대조로 ×0.825 — 메테오잼 Lv.3 원값 24 = +19.8%, 11/18), after = 개편 후 Lv.1 (같은 타입이면 모두 같음, 퀵포인트1·2만 기존 유지) */
 window.FS_STAT = {
   names: {
     mid_def: { kr: "중거리 슛 수비저항", en: "Mid Range Shot Defense Resist", jp: "ミドルシュート守備抵抗" },
