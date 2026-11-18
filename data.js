@@ -50,7 +50,7 @@ window.NOTICE = {
             ["골라 보기", "전체 · 점프슛 · 레이업 · 덩크 탭으로 나눠 볼 수 있습니다."],
             ["없어지는 것", "프리스타일 팩 · 조각 · 티켓"] ] },
           { type: "facts", photo: "shop", label: "상점에서도 구매", items: [
-            ["위치", "상점 › 프리스타일 모션에서도 같은 가격(32,000코인)으로 살 수 있습니다."] ] },
+            ["위치", "상점 › 프리스타일 모션에서도 같은 가격으로 살 수 있습니다."] ] },
           { type: "facts", photo: "confirm", label: "구매 확인", items: [
             ["확인 창", "구매 전에 프리스타일 이름과 가격, 받을 캐릭터가 한 번 더 표시됩니다."] ] },
           { type: "facts", photo: "autoequip", label: "빈 칸에 바로 장착", items: [
@@ -66,7 +66,7 @@ window.NOTICE = {
             ["빈 칸", "장착할 프리스타일이 없으면 기본 모션이 나갑니다."] ] },
           { type: "facts", photo: "order", label: "순서 정하기", items: [
             ["배치", "한 칸에는 프리스타일 1개만 넣을 수 있고, 원하는 순서로 배치합니다."],
-            ["장착 가능 회수", "같은 프리스타일을 여러 칸에 넣으려면 강화로 장착 가능 회수를 늘려야 합니다. Lv.1 1칸 · Lv.2 1칸 · Lv.3 2칸 · Lv.4 2칸 · Lv.5 3칸 (모든 프리스타일 같음)."] ] },
+            ["장착 가능 회수", "같은 프리스타일을 여러 칸에 넣으려면 강화로 장착 가능 회수를 늘려야 합니다. 레벨별 회수는 <a href=\"#enhance\">강화</a> 단원의 '레벨별 능력치 · 장착 가능 회수' 표에 있습니다."] ] },
           { type: "facts", label: "사이클 관리", items: [
             ["타입 바꾸기", "L1 · R1 (키보드 Q · W)로 점프슛 · 레이업 · 덩크 사이클을 바꿉니다."],
             ["장착", "'사이클 관리'에서 칸을 고르고 목록에서 프리스타일을 선택한 뒤 '모션 장착'을 누릅니다. 지금 장착된 모션과 고른 모션이 나란히 보입니다."],
@@ -83,26 +83,28 @@ window.NOTICE = {
       { id: "enhance", nav: "강화", title: "강화는 어떻게 하나요?", q: "포인트 또는 코인으로 Lv.5 까지 강화합니다. 레벨이 높을수록 능력치가 오르고 더 많은 칸에 넣을 수 있습니다.",
         blocks: [
           { type: "facts", photo: "enhance", items: [
-            ["강화 비용", "포인트 강화 1회 10포인트 · 코인 강화 1회 20,000코인"],
-            ["성공 확률", "Lv.1→2 포인트 30% · 코인 20% / Lv.2→3 포인트 20% · 코인 10% / Lv.3→4 포인트 10% · 코인 3.3% / Lv.4→5 포인트 5% · 코인 1.3% (모든 프리스타일 같음)"],
             ["성공하면", "레벨이 오르고 능력치가 정해진 만큼 오릅니다(무작위 아님)."],
             ["실패하면", "레벨은 그대로이고 사용한 재화만 소모됩니다."],
             ["Lv.5 가 되면", "더 이상 강화할 수 없습니다. 다른 프리스타일을 선택해 주세요."],
             ["이벤트 기간", "강화 비용 할인이나 성공 확률 추가가 붙을 수 있습니다."],
-            ["강화 티켓", "포인트 강화 1회를 대신하는 티켓이며, 성공 확률도 포인트 강화와 같습니다. 리뉴얼 전에 Lv.2 이상 프리스타일을 가지고 있던 분께 인벤토리로 지급됩니다(기존 보유자 참고)."] ] },
+            ["강화 티켓", "포인트 강화 1회를 대신하는 티켓이며, 성공 확률도 포인트 강화와 같습니다. 지급 기준은 <a href=\"#legacy\">기존 보유자</a> 단원에 있습니다."] ] },
+          { type: "table", label: "강화 비용 · 성공 확률", text: "",
+            head: ["강화", "포인트 강화<br><small>1회 10포인트</small>", "코인 강화<br><small>1회 20,000코인</small>"],
+            rows: [["Lv.1 → Lv.2", "30%", "20%"], ["Lv.2 → Lv.3", "20%", "10%"], ["Lv.3 → Lv.4", "10%", "3.3%"], ["Lv.4 → Lv.5", "5%", "1.3%"]],
+            note: ["모든 프리스타일이 같습니다. 강화 티켓은 포인트 강화와 같은 확률입니다."] },
           { type: "facts", photo: "enhanim", label: "강화 연출", items: [
             ["건너뛰기", "강화 연출은 오른쪽 위 SKIP 으로 건너뛸 수 있습니다."] ] },
           { type: "facts", photo: "enhresult", label: "강화 결과", items: [
             ["성공하면", "오른 장착 가능 회수와 능력치가 표시됩니다."],
             ["자동 닫힘", "확인을 누르지 않아도 5초 뒤 닫힙니다. '앞으로 연출 스킵'을 고르면 다음부터 연출을 건너뜁니다."] ] },
-          { type: "table", label: "레벨별 능력치", text: "같은 타입이면 어떤 프리스타일이든 능력치가 같습니다. 능력치는 쌓이지 않고 지금 레벨의 값만, 그 프리스타일로 슛하는 동안에만 적용됩니다.",
-            head: ["레벨", "점프슛<br><small>중거리 슛 · 3점 슛 수비 저항</small>", "레이업<br><small>골밑 · 원거리 레이업 블록 저항</small>", "덩크<br><small>골밑 덩크 모션 빠르기 · 원거리 덩크 수비 저항</small>"],
-            rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%"]],
+          { type: "table", label: "레벨별 능력치 · 장착 가능 회수", text: "같은 타입이면 어떤 프리스타일이든 능력치가 같습니다. 능력치는 쌓이지 않고 지금 레벨의 값만, 그 프리스타일로 슛하는 동안에만 적용됩니다.",
+            head: ["레벨", "점프슛<br><small>중거리 슛 · 3점 슛 수비 저항</small>", "레이업<br><small>골밑 · 원거리 레이업 블록 저항</small>", "덩크<br><small>골밑 덩크 모션 빠르기 · 원거리 덩크 수비 저항</small>", "장착 가능 회수"],
+            rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%", "1칸"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%", "1칸"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%", "2칸"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%", "2칸"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%", "3칸"]],
             note: ["퀵 포인트1 · 2는 기존 능력치를 그대로 유지합니다(Lv.1 중거리 슛 수비 저항 +0.36% · 3점 슛 수비 저항 +0.18% → Lv.5 +1.8% · +0.9%).", "덩크는 거리마다 하나만 적용됩니다: 골밑 덩크는 모션 빠르기, 원거리 덩크는 수비 저항.", "슛 성공률은 모든 프리스타일 · 모든 레벨에서 캐릭터의 슛 성공률 그대로입니다(배율 100%)."] },
           { type: "table", label: "리뉴얼 전과 달라진 점 (Lv.5 기준)", text: "능력치 종류가 바뀐 프리스타일과 사용 횟수의 변화입니다.",
-            head: ["프리스타일", "리뉴얼 전", "리뉴얼 후"],
-            rows: [["무릎 지옥", "중거리 슛 모션 빠르기 +48% · 3점 슛 모션 빠르기 +40%", "3점 슛 수비 저항 +8.1% · 중거리 슛 수비 저항 +8.16%"], ["레이업 덩크 · 투핸드 파워슬램 · 원핸드슬램", "골밑 덩크 모션 빠르기 +24%", "골밑 덩크 모션 빠르기 +17.4%, 원거리 덩크로도 나가며 원거리 덩크 수비 저항 +22.5%"], ["메테오잼 · 가위치기 · 720도 덩크", "원거리 덩크 모션 빠르기 +24%", "원거리 덩크 수비 저항 +22.5%, 골밑 덩크로도 나가며 골밑 덩크 모션 빠르기 +17.4%"], ["사용 횟수 (모든 프리스타일)", "Lv.5 5회 (퀵 포인트 4회)", "Lv.5 3칸, 모든 프리스타일 같음"]],
-            note: ["줄어든 능력치 대신 다른 능력치가 새로 붙거나 크게 올랐습니다.", "일부 레이업은 새 동작으로 블록 가능 시간이 달라졌습니다. 투핸드 레이업 · 퀵 레이업 · 소프트 터치는 길어지고 360도 레이업 · 트리플 클러치는 짧아졌으며, 블록 저항이 최대 +50%까지 올랐습니다."] } ] },
+            head: ["프리스타일", "능력치", "리뉴얼 전", "리뉴얼 후"],
+            rows: [["무릎 지옥", "중거리 슛 모션 빠르기", "+48%", "–"], ["", "3점 슛 모션 빠르기", "+40%", "–"], ["", "3점 슛 수비 저항", "–", "+8.1%"], ["", "중거리 슛 수비 저항", "–", "+8.16%"], ["레이업 덩크 · 투핸드 파워슬램 · 원핸드슬램", "골밑 덩크 모션 빠르기", "+24%", "+17.4%"], ["", "원거리 덩크 수비 저항", "–", "+22.5%"], ["메테오잼 · 가위치기 · 720도 덩크", "원거리 덩크 모션 빠르기", "+24%", "–"], ["", "원거리 덩크 수비 저항", "–", "+22.5%"], ["", "골밑 덩크 모션 빠르기", "–", "+17.4%"], ["모든 프리스타일", "Lv.5 사용 횟수", "5회 (퀵 포인트 4회)", "3칸"]],
+            note: ["리뉴얼 후 덩크는 하나의 모션이 골밑 · 원거리 모두에서 나가며, 거리에 맞는 능력치 하나가 적용됩니다.", "줄어든 능력치 대신 다른 능력치가 새로 붙거나 크게 올랐습니다.", "일부 레이업은 새 동작으로 블록 가능 시간이 달라졌습니다. 투핸드 레이업 · 퀵 레이업 · 소프트 터치는 길어지고 360도 레이업 · 트리플 클러치는 짧아졌으며, 블록 저항이 최대 +50%까지 올랐습니다."] } ] },
 
       { id: "dex", nav: "프리스타일 영상", title: "모션이 어떻게 바뀌었나요?", q: "프리스타일을 누르면 변경 전과 변경 후 영상을 나란히 볼 수 있습니다.",
         blocks: [ { type: "dex" } ] },
@@ -111,18 +113,26 @@ window.NOTICE = {
         blocks: [
           { type: "alert", text: "<b>가지고 있던 프리스타일은 레벨 그대로 새 시스템으로 옮겨집니다.</b> Lv.2 였다면 Lv.2 로 시작해 Lv.3 부터 이어서 강화할 수 있습니다." },
           { type: "facts", photo: "sell", items: [
-            ["강화 티켓 지급", "점검 시작 시점에 가지고 있던 Lv.2 이상 프리스타일 1개(캐릭터별)마다 레벨에 따라 합산해 지급됩니다: Lv.2 4장 · Lv.3 12장 · Lv.4 30장 · Lv.5 60장 (Lv.1 은 없음)."],
+            ["강화 티켓 지급", "점검 시작 시점에 가지고 있던 Lv.2 이상 프리스타일 1개(캐릭터별)마다 아래 표의 장수를 합산해 지급합니다."],
             ["받는 곳", "인벤토리로 바로 들어가며, 알림 메일이 함께 발송됩니다."],
             ["능력치 · 장착 가능 회수", "이미 올려 둔 프리스타일도 새 능력치와 레벨별 새 장착 가능 회수가 적용됩니다."],
-            ["남은 조각 · 티켓", "더 이상 쓸 수 없고, 매니지먼트 › 인벤토리에서 코인으로 판매할 수 있습니다: 조각 1개 500코인 · 조각 티켓 500코인 · 실버 티켓 2,000코인 · 골드 티켓 3,000코인."],
+            ["남은 조각 · 티켓", "더 이상 쓸 수 없고, 매니지먼트 › 인벤토리에서 아래 표의 가격으로 판매할 수 있습니다."],
             ["가지고 있던 팩", "계속 열 수 있지만, 팩에서 나온 조각은 사용할 수 없습니다(코인으로 판매 가능)."] ],
-            note: "레벨별 능력치는 <a href=\"#enhance\">강화</a> 단원의 '레벨별 능력치' 표를 참고하세요." } ] },
+            note: "레벨별 능력치와 장착 가능 회수는 <a href=\"#enhance\">강화</a> 단원의 '레벨별 능력치 · 장착 가능 회수' 표를 참고하세요." },
+          { type: "table", label: "강화 티켓 지급 장수", text: "",
+            head: ["가지고 있던 레벨", "1개당 지급"],
+            rows: [["Lv.1", "없음"], ["Lv.2", "4장"], ["Lv.3", "12장"], ["Lv.4", "30장"], ["Lv.5", "60장"]],
+            note: [] },
+          { type: "table", label: "판매 가격", text: "",
+            head: ["항목", "1개당 가격"],
+            rows: [["조각", "500코인"], ["조각 티켓", "500코인"], ["실버 티켓", "2,000코인"], ["골드 티켓", "3,000코인"]],
+            note: [] } ] },
 
       { id: "faq", nav: "자주 묻는 질문", title: "자주 묻는 질문", q: "문의가 많은 내용을 모았습니다.",
         blocks: [
           { type: "faq", items: [
-            ["가지고 있던 조각은 어떻게 되나요?", "이제 프리스타일은 코인으로 바로 구매하고 강화하는 방식이라 조각은 더 이상 쓸 수 없습니다. 캐릭터별로 가지고 있던 조각은 <b>매니지먼트 › 인벤토리</b>에 표시되며, 1개당 500코인에 판매할 수 있습니다."],
-            ["리뉴얼 전에 레벨을 올려 둔 프리스타일은 보상이 있나요?", "있습니다. 점검 시작 시점에 가지고 있던 프리스타일 1개당 레벨에 따라 <b>모션 강화 티켓</b>이 인벤토리로 지급되고, 알림 메일도 함께 발송됩니다(Lv.1 0장 · Lv.2 4장 · Lv.3 12장 · Lv.4 30장 · Lv.5 60장). 티켓은 포인트 강화 1회 대신 쓸 수 있습니다."],
+            ["가지고 있던 조각은 어떻게 되나요?", "이제 프리스타일은 코인으로 바로 구매하고 강화하는 방식이라 조각은 더 이상 쓸 수 없습니다. 캐릭터별로 가지고 있던 조각은 <b>매니지먼트 › 인벤토리</b>에서 코인으로 판매할 수 있으며, 가격은 <a href=\"#legacy\">기존 보유자</a> 단원의 표에 있습니다."],
+            ["리뉴얼 전에 레벨을 올려 둔 프리스타일은 보상이 있나요?", "있습니다. 점검 시작 시점에 가지고 있던 프리스타일의 레벨에 따라 <b>모션 강화 티켓</b>이 인벤토리로 지급되고, 알림 메일도 함께 발송됩니다. 지급 장수는 <a href=\"#legacy\">기존 보유자</a> 단원의 표에 있습니다. 티켓은 포인트 강화 1회 대신 쓸 수 있습니다."],
             ["Lv.2 였던 프리스타일을 새 시스템에서 이어서 강화할 수 있나요?", "네. 레벨이 그대로 유지되므로 Lv.2 로 시작해 Lv.3 부터 이어서 강화하실 수 있습니다."],
             ["가지고 있던 프리스타일에도 새 능력치가 적용되나요?", "네. 이미 올려 둔 프리스타일도 새 능력치로 바뀌고, 사이클에 넣을 수 있는 장착 가능 회수도 레벨별 새 기준으로 바뀝니다."],
             ["강화에 실패하면 프리스타일이 사라지나요?", "아니요. 레벨이 그대로 유지됩니다."],
@@ -179,7 +189,7 @@ window.NOTICE = {
             ["Browse", "Use the All · Jump Shot · Layup · Dunk tabs."],
             ["Removed", "Freestyle Packs · Pieces · Tickets"] ] },
           { type: "facts", photo: "shop", label: "Buy in the Shop too", items: [
-            ["Where", "You can also buy them in Shop › Freestyle Motion for the same price (32,000 Coins)."] ] },
+            ["Where", "You can also buy them in Shop › Freestyle Motion for the same price."] ] },
           { type: "facts", photo: "confirm", label: "Purchase check", items: [
             ["Confirm window", "Before you buy, the Freestyle, its price and the character who gets it are shown once more."] ] },
           { type: "facts", photo: "autoequip", label: "Equip to an empty slot", items: [
@@ -195,7 +205,7 @@ window.NOTICE = {
             ["Empty slot", "Your default motion is used."] ] },
           { type: "facts", photo: "order", label: "Set Your Order", items: [
             ["Placement", "Each slot holds one Freestyle. Arrange them in any order you like."],
-            ["Equip Limit", "To equip the same Freestyle in more slots, upgrade it to raise its Equip Limit: Lv.1 1 · Lv.2 1 · Lv.3 2 · Lv.4 2 · Lv.5 3 (same for every Freestyle)."] ] },
+            ["Equip Limit", "To equip the same Freestyle in more slots, enhance it to raise its Equip Limit. The limit at each level is in the \"Stats and Equip Limit by level\" table in <a href=\"#enhance\">Enhance</a>."] ] },
           { type: "facts", label: "Manage Cycle", items: [
             ["Switch type", "Use L1 · R1 (Q · W on keyboard) to switch between the Jump Shot, Layup and Dunk cycles."],
             ["Equip", "In Manage Cycle, pick a slot, choose a Freestyle from the list and press Equip Motion. The equipped motion and the one you chose are shown side by side."],
@@ -212,26 +222,28 @@ window.NOTICE = {
       { id: "enhance", nav: "Enhance", title: "How does Enhancement work?", q: "Enhance up to Lv.5 with Points or Coins. Higher levels give better stats and more cycle slots.",
         blocks: [
           { type: "facts", photo: "enhance", items: [
-            ["Cost", "Point Enhancement 10 Points · Coin Enhancement 20,000 Coins per try"],
-            ["Success rate", "Lv.1→2 Points 30% · Coins 20% / Lv.2→3 Points 20% · Coins 10% / Lv.3→4 Points 10% · Coins 3.3% / Lv.4→5 Points 5% · Coins 1.3% (same for every Freestyle)"],
             ["Success", "Level up with fixed stat gains, not random."],
             ["Failure", "Your level stays; only the currency is used."],
             ["At Lv.5", "It can't be enhanced any further. Please select another Freestyle."],
             ["During events", "Enhancement discounts or bonus success rates may apply."],
-            ["Motion Enhancement Ticket", "Can be used in place of Points for one enhancement, with the same success rate. Sent to the Inventory of players who owned Lv.2+ Freestyles before the Renewal (see Current Owners)."] ] },
+            ["Motion Enhancement Ticket", "Can be used in place of Points for one enhancement, with the same success rate. See <a href=\"#legacy\">Current Owners</a> for who receives them."] ] },
+          { type: "table", label: "Cost and success rate", text: "",
+            head: ["Enhancement", "Point Enhancement<br><small>10 Points per try</small>", "Coin Enhancement<br><small>20,000 Coins per try</small>"],
+            rows: [["Lv.1 → Lv.2", "30%", "20%"], ["Lv.2 → Lv.3", "20%", "10%"], ["Lv.3 → Lv.4", "10%", "3.3%"], ["Lv.4 → Lv.5", "5%", "1.3%"]],
+            note: ["The same for every Freestyle. Motion Enhancement Tickets use the Point Enhancement rate."] },
           { type: "facts", photo: "enhanim", label: "Enhancement animation", items: [
             ["Skip", "You can skip the enhancement animation with SKIP at the top right."] ] },
           { type: "facts", photo: "enhresult", label: "Enhancement result", items: [
             ["On success", "The raised Equip Limit and stats are shown."],
             ["Closes by itself", "It closes after 5 seconds even if you don't press Confirm. Choose Skip Animation to skip it from then on."] ] },
-          { type: "table", label: "Stats by level", text: "Freestyles of the same type have the same stats. Stats don't stack: only your current level applies, and only while shooting with that Freestyle.",
-            head: ["Level", "Jump Shot<br><small>Mid Range · 3 Point Shot Defense Resist</small>", "Layup<br><small>Short · Long Distance Layup Block Resist</small>", "Dunk<br><small>Short Distance Dunk Speed · Long Distance Dunk Defense Resist</small>"],
-            rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%"]],
+          { type: "table", label: "Stats and Equip Limit by level", text: "Freestyles of the same type have the same stats. Stats don't stack: only your current level applies, and only while shooting with that Freestyle.",
+            head: ["Level", "Jump Shot<br><small>Mid Range · 3 Point Shot Defense Resist</small>", "Layup<br><small>Short · Long Distance Layup Block Resist</small>", "Dunk<br><small>Short Distance Dunk Speed · Long Distance Dunk Defense Resist</small>", "Equip Limit"],
+            rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%", "1"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%", "1"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%", "2"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%", "2"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%", "3"]],
             note: ["Quick Point1 · 2 keep their previous stats (Lv.1 Mid Range Shot Defense Resist +0.36% · 3 Point Shot Defense Resist +0.18% → Lv.5 +1.8% · +0.9%).", "Dunks apply one stat by distance: Short Distance Dunk Speed for short distance dunks, Long Distance Dunk Defense Resist for long distance dunks.", "Shot success rate is your character's own rate for every Freestyle at every level (multiplier 100%)."] },
           { type: "table", label: "What changed from before (at Lv.5)", text: "Freestyles whose stat types changed, and the change in use count.",
-            head: ["Freestyle", "Before", "After"],
-            rows: [["Knee Hell", "Mid Range Shot Release Speed +48% · 3 Point Shot Release Speed +40%", "3 Point Shot Defense Resist +8.1% · Mid Range Shot Defense Resist +8.16%"], ["Layup Dunk · Two-Handed Power Slam · One-Handed Slam", "Short Distance Dunk Speed +24%", "Short Distance Dunk Speed +17.4%, now also used for long distance dunks with Long Distance Dunk Defense Resist +22.5%"], ["Meteor Jam · Scissors Throw · 720 Dunk", "Long Distance Dunk Speed +24%", "Long Distance Dunk Defense Resist +22.5%, now also used for short distance dunks with Short Distance Dunk Speed +17.4%"], ["Use count (all Freestyles)", "Lv.5 5 times (Quick Point 4)", "Lv.5 3 slots, the same for every Freestyle"]],
-            note: ["Where a stat went down, another stat was added or raised a lot.", "Some layups have new motions, so their block window changed. Two-Handed Layup, Quick Layup and Soft Touch got longer, while 360 Layup and Triple Clutch got shorter, and Block Resist now goes up to +50%."] } ] },
+            head: ["Freestyle", "Stat", "Before", "After"],
+            rows: [["Knee Hell", "Mid Range Shot Release Speed", "+48%", "–"], ["", "3 Point Shot Release Speed", "+40%", "–"], ["", "3 Point Shot Defense Resist", "–", "+8.1%"], ["", "Mid Range Shot Defense Resist", "–", "+8.16%"], ["Layup Dunk · Two-Handed Power Slam · One-Handed Slam", "Short Distance Dunk Speed", "+24%", "+17.4%"], ["", "Long Distance Dunk Defense Resist", "–", "+22.5%"], ["Meteor Jam · Scissors Throw · 720 Dunk", "Long Distance Dunk Speed", "+24%", "–"], ["", "Long Distance Dunk Defense Resist", "–", "+22.5%"], ["", "Short Distance Dunk Speed", "–", "+17.4%"], ["All Freestyles", "Lv.5 use count", "5 times (Quick Point 4)", "3 slots"]],
+            note: ["After the Renewal, one dunk motion works at both short and long distance, and the stat for that distance applies.", "Where a stat went down, another stat was added or raised a lot.", "Some layups have new motions, so their block window changed. Two-Handed Layup, Quick Layup and Soft Touch got longer, while 360 Layup and Triple Clutch got shorter, and Block Resist now goes up to +50%."] } ] },
 
       { id: "dex", nav: "Freestyle Videos", title: "How have the motions changed?", q: "Select a Freestyle to watch the before and after videos side by side.",
         blocks: [ { type: "dex" } ] },
@@ -240,18 +252,26 @@ window.NOTICE = {
         blocks: [
           { type: "alert", text: "<b>Your Freestyles move to the new system at their current level.</b> A Lv.2 Freestyle starts at Lv.2, and you can keep enhancing it from there." },
           { type: "facts", photo: "sell", items: [
-            ["Motion Enhancement Tickets", "For each Lv.2+ Freestyle you owned when the maintenance began (per character), tickets are added up by level: Lv.2 4 · Lv.3 12 · Lv.4 30 · Lv.5 60 (none for Lv.1)."],
+            ["Motion Enhancement Tickets", "For each Lv.2+ Freestyle you owned when the maintenance began (per character), the tickets in the table below are added up and sent."],
             ["Where you get them", "Sent straight to your Inventory, with a notification mail."],
             ["Stats · Equip Limit", "Freestyles you already upgraded also get the new stats and the new Equip Limit for their level."],
-            ["Leftover Pieces · Tickets", "They can no longer be used. Sell them for Coins in Management › Inventory: Piece 500 Coins each · Freestyle Piece Ticket 500 · Freestyle Silver Ticket 2,000 · Freestyle Gold Ticket 3,000."],
+            ["Leftover Pieces · Tickets", "They can no longer be used. Sell them in Management › Inventory for the prices in the table below."],
             ["Packs you own", "You can still open them, but the pieces from them can't be used (sell them for Coins)."] ],
-            note: "For stats at each level, see the \"Stats by level\" table in <a href=\"#enhance\">Enhance</a>." } ] },
+            note: "For stats and Equip Limit at each level, see the \"Stats and Equip Limit by level\" table in <a href=\"#enhance\">Enhance</a>." },
+          { type: "table", label: "Motion Enhancement Tickets granted", text: "",
+            head: ["Level you had", "Tickets per Freestyle"],
+            rows: [["Lv.1", "None"], ["Lv.2", "4"], ["Lv.3", "12"], ["Lv.4", "30"], ["Lv.5", "60"]],
+            note: [] },
+          { type: "table", label: "Selling prices", text: "",
+            head: ["Item", "Price each"],
+            rows: [["Piece", "500 Coins"], ["Freestyle Piece Ticket", "500 Coins"], ["Freestyle Silver Ticket", "2,000 Coins"], ["Freestyle Gold Ticket", "3,000 Coins"]],
+            note: [] } ] },
 
       { id: "faq", nav: "FAQ", title: "FAQ", q: "Answers to frequently asked questions.",
         blocks: [
           { type: "faq", items: [
-            ["What happens to the pieces I had?", "Freestyles are now bought and enhanced with Coins, so pieces can no longer be used. The pieces each character had are shown in <b>Management › Inventory</b>, and you can sell them for 500 Coins each."],
-            ["Do I get anything for Freestyles I upgraded before the Renewal?", "Yes. For each Freestyle you owned when the maintenance began, <b>Motion Enhancement Tickets</b> are sent to your Inventory by level, with a notification mail (Lv.1 0 · Lv.2 4 · Lv.3 12 · Lv.4 30 · Lv.5 60). Each ticket can be used in place of one Point Enhancement."],
+            ["What happens to the pieces I had?", "Freestyles are now bought and enhanced with Coins, so pieces can no longer be used. The pieces each character had can be sold for Coins in <b>Management › Inventory</b>. See <a href=\"#legacy\">Current Owners</a> for the prices."],
+            ["Do I get anything for Freestyles I upgraded before the Renewal?", "Yes. <b>Motion Enhancement Tickets</b> are sent to your Inventory based on the level of each Freestyle you owned when the maintenance began, with a notification mail. See <a href=\"#legacy\">Current Owners</a> for the amounts. Each ticket can be used in place of one Point Enhancement."],
             ["Can I keep enhancing a Lv.2 Freestyle in the new system?", "Yes. Its level stays the same, so it starts at Lv.2 and you can enhance it from Lv.3 on."],
             ["Do the new stats apply to Freestyles I already own?", "Yes. Freestyles you already upgraded get the new stats, and their Equip Limit also follows the new rule for each level."],
             ["Will my Freestyle disappear if an enhancement fails?", "No. It keeps its current level."],
@@ -308,7 +328,7 @@ window.NOTICE = {
             ["絞り込み", "すべて・ジャンプシュート・レイアップ・ダンクのタブで分けて見られます。"],
             ["廃止", "フリースタイルパック・ピース・チケット"] ] },
           { type: "facts", photo: "shop", label: "ショップでも購入", items: [
-            ["場所", "ショップ › フリースタイルモーションでも同じ価格（32,000コイン）で購入できます。"] ] },
+            ["場所", "ショップ › フリースタイルモーションでも同じ価格で購入できます。"] ] },
           { type: "facts", photo: "confirm", label: "購入の確認", items: [
             ["確認画面", "購入前に、フリースタイル名・価格・受け取るキャラクターがもう一度表示されます。"] ] },
           { type: "facts", photo: "autoequip", label: "空き枠にすぐ装着", items: [
@@ -324,7 +344,7 @@ window.NOTICE = {
             ["空いている枠", "基本モーションが出ます。"] ] },
           { type: "facts", photo: "order", label: "順番を決める", items: [
             ["配置", "1つの枠にはフリースタイルを1つだけ入れられ、好きな順番に配置できます。"],
-            ["装着可能回数", "同じフリースタイルを複数の枠に入れるには、強化で装着可能回数を増やします: Lv.1 1枠・Lv.2 1枠・Lv.3 2枠・Lv.4 2枠・Lv.5 3枠（すべてのフリースタイル共通）。"] ] },
+            ["装着可能回数", "同じフリースタイルを複数の枠に入れるには、強化で装着可能回数を増やします。レベルごとの回数は<a href=\"#enhance\">「強化」</a>の「レベル別の能力値・装着可能回数」の表にあります。"] ] },
           { type: "facts", label: "サイクル管理", items: [
             ["タイプの切り替え", "L1・R1（キーボードは Q・W）でジャンプシュート・レイアップ・ダンクのサイクルを切り替えます。"],
             ["装着", "「サイクル管理」で枠を選び、リストからフリースタイルを選んで「モーション装着」を押します。装着中のモーションと選んだモーションが並んで表示されます。"],
@@ -341,26 +361,28 @@ window.NOTICE = {
       { id: "enhance", nav: "強化", title: "強化はどう行いますか？", q: "ポイントまたはコインで Lv.5 まで強化します。レベルが上がるほど能力値が上がり、装着できる枠も増えます。",
         blocks: [
           { type: "facts", photo: "enhance", items: [
-            ["強化費用", "ポイント強化 1回 10ポイント・コイン強化 1回 20,000コイン"],
-            ["成功確率", "Lv.1→2 ポイント 30%・コイン 20% / Lv.2→3 ポイント 20%・コイン 10% / Lv.3→4 ポイント 10%・コイン 3.3% / Lv.4→5 ポイント 5%・コイン 1.3%（すべてのフリースタイル共通）"],
             ["成功すると", "レベルが上がり、能力値が決まった分だけ上がります（ランダムではありません）。"],
             ["失敗すると", "レベルはそのままで、使った通貨のみ消費されます。"],
             ["Lv.5 になると", "これ以上強化できません。別のフリースタイルを選んでください。"],
             ["イベント期間", "強化費用の割引や成功確率の追加が付くことがあります。"],
-            ["強化チケット", "ポイント強化1回の代わりに使えるチケットで、成功確率もポイント強化と同じです。リニューアル前に Lv.2 以上のフリースタイルをお持ちだった方のインベントリに配布されます（既存の所持者を参照）。"] ] },
+            ["強化チケット", "ポイント強化1回の代わりに使えるチケットで、成功確率もポイント強化と同じです。配布の基準は<a href=\"#legacy\">「既存の所持者」</a>にあります。"] ] },
+          { type: "table", label: "強化費用・成功確率", text: "",
+            head: ["強化", "ポイント強化<br><small>1回 10ポイント</small>", "コイン強化<br><small>1回 20,000コイン</small>"],
+            rows: [["Lv.1 → Lv.2", "30%", "20%"], ["Lv.2 → Lv.3", "20%", "10%"], ["Lv.3 → Lv.4", "10%", "3.3%"], ["Lv.4 → Lv.5", "5%", "1.3%"]],
+            note: ["すべてのフリースタイル共通です。強化チケットはポイント強化と同じ確率です。"] },
           { type: "facts", photo: "enhanim", label: "強化演出", items: [
             ["スキップ", "強化演出は右上の SKIP でスキップできます。"] ] },
           { type: "facts", photo: "enhresult", label: "強化結果", items: [
             ["成功すると", "上がった装着可能回数と能力値が表示されます。"],
             ["自動で閉じる", "確認を押さなくても5秒後に閉じます。「今後演出をスキップ」を選ぶと、次から演出をスキップします。"] ] },
-          { type: "table", label: "レベル別の能力値", text: "同じタイプのフリースタイルは能力値が同じです。能力値は累積せず、現在のレベルの値のみ、そのフリースタイルでシュートする間だけ適用されます。",
-            head: ["レベル", "ジャンプシュート<br><small>ミドル・3点シュート守備抵抗</small>", "レイアップ<br><small>ショート・ロングレイアップブロック抵抗</small>", "ダンク<br><small>ショートダンクモーション速度・ロングダンク守備抵抗</small>"],
-            rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%"]],
+          { type: "table", label: "レベル別の能力値・装着可能回数", text: "同じタイプのフリースタイルは能力値が同じです。能力値は累積せず、現在のレベルの値のみ、そのフリースタイルでシュートする間だけ適用されます。",
+            head: ["レベル", "ジャンプシュート<br><small>ミドル・3点シュート守備抵抗</small>", "レイアップ<br><small>ショート・ロングレイアップブロック抵抗</small>", "ダンク<br><small>ショートダンクモーション速度・ロングダンク守備抵抗</small>", "装着可能回数"],
+            rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%", "1枠"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%", "1枠"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%", "2枠"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%", "2枠"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%", "3枠"]],
             note: ["クイックポイント1・2は既存の能力値を維持します（Lv.1 ミドルシュート守備抵抗 +0.36%・3点シュート守備抵抗 +0.18% → Lv.5 +1.8%・+0.9%）。", "ダンクは距離ごとに1つだけ適用されます: ショートダンクはモーション速度、ロングダンクは守備抵抗。", "シュート成功率は、すべてのフリースタイル・すべてのレベルでキャラクターのシュート成功率そのままです（倍率100%）。"] },
           { type: "table", label: "リニューアル前からの変化（Lv.5 基準）", text: "能力値の種類が変わったフリースタイルと、使用回数の変化です。",
-            head: ["フリースタイル", "リニューアル前", "リニューアル後"],
-            rows: [["膝地獄", "ミドルシュートモーション速度 +48%・3点シュートモーション速度 +40%", "3点シュート守備抵抗 +8.1%・ミドルシュート守備抵抗 +8.16%"], ["レイアップダンク・ツーハンドパワースラム・ワンハンドスラム", "ショートダンクモーション速度 +24%", "ショートダンクモーション速度 +17.4%、ロングダンクでも発動しロングダンク守備抵抗 +22.5%"], ["メテオジャム・ハサミ打ち・720度ダンク", "ロングダンクモーション速度 +24%", "ロングダンク守備抵抗 +22.5%、ショートダンクでも発動しショートダンクモーション速度 +17.4%"], ["使用回数（全フリースタイル）", "Lv.5 5回（クイックポイント 4回）", "Lv.5 3枠、すべてのフリースタイル共通"]],
-            note: ["下がった能力値の代わりに、別の能力値が新しく付いたり大きく上がったりしています。", "一部のレイアップは新しいモーションになり、ブロックされうる時間が変わりました。ツーハンドレイアップ・クイックレイアップ・ソフトタッチは長く、360度レイアップ・トリプルクラッチは短くなり、ブロック抵抗は最大 +50% まで上がりました。"] } ] },
+            head: ["フリースタイル", "能力値", "リニューアル前", "リニューアル後"],
+            rows: [["膝地獄", "ミドルシュートモーション速度", "+48%", "–"], ["", "3点シュートモーション速度", "+40%", "–"], ["", "3点シュート守備抵抗", "–", "+8.1%"], ["", "ミドルシュート守備抵抗", "–", "+8.16%"], ["レイアップダンク・ツーハンドパワースラム・ワンハンドスラム", "ショートダンクモーション速度", "+24%", "+17.4%"], ["", "ロングダンク守備抵抗", "–", "+22.5%"], ["メテオジャム・ハサミ打ち・720度ダンク", "ロングダンクモーション速度", "+24%", "–"], ["", "ロングダンク守備抵抗", "–", "+22.5%"], ["", "ショートダンクモーション速度", "–", "+17.4%"], ["すべてのフリースタイル", "Lv.5 の使用回数", "5回（クイックポイント 4回）", "3枠"]],
+            note: ["リニューアル後のダンクは1つのモーションがショート・ロング両方で発動し、距離に合った能力値が1つ適用されます。", "下がった能力値の代わりに、別の能力値が新しく付いたり大きく上がったりしています。", "一部のレイアップは新しいモーションになり、ブロックされうる時間が変わりました。ツーハンドレイアップ・クイックレイアップ・ソフトタッチは長く、360度レイアップ・トリプルクラッチは短くなり、ブロック抵抗は最大 +50% まで上がりました。"] } ] },
 
       { id: "dex", nav: "フリースタイル動画", title: "モーションはどう変わりましたか？", q: "フリースタイルを選ぶと、変更前と変更後の動画を並べて見られます。",
         blocks: [ { type: "dex" } ] },
@@ -369,18 +391,26 @@ window.NOTICE = {
         blocks: [
           { type: "alert", text: "<b>お持ちのフリースタイルは、レベルそのままで新しいシステムに移行されます。</b> Lv.2 だったものは Lv.2 から始まり、Lv.3 以降も続けて強化できます。" },
           { type: "facts", photo: "sell", items: [
-            ["強化チケットの配布", "メンテナンス開始時点でお持ちだった Lv.2 以上のフリースタイル1つ（キャラクターごと）につき、レベルに応じて合算して配布: Lv.2 4枚・Lv.3 12枚・Lv.4 30枚・Lv.5 60枚（Lv.1 はなし）。"],
+            ["強化チケットの配布", "メンテナンス開始時点でお持ちだった Lv.2 以上のフリースタイル1つ（キャラクターごと）につき、下の表の枚数を合算して配布します。"],
             ["受け取り場所", "インベントリに直接届き、お知らせメールも送信されます。"],
             ["能力値・装着可能回数", "すでに強化していたフリースタイルにも、新しい能力値とレベルごとの新しい装着可能回数が適用されます。"],
-            ["残ったピース・チケット", "今後は使用できません。マネジメント › インベントリでコインに売却できます: ピース1個 500コイン・ピースチケット 500コイン・シルバーチケット 2,000コイン・ゴールドチケット 3,000コイン。"],
+            ["残ったピース・チケット", "今後は使用できません。マネジメント › インベントリで下の表の価格で売却できます。"],
             ["お持ちのパック", "引き続き開封できますが、パックから出たピースは使用できません（コインに売却可能）。"] ],
-            note: "レベルごとの能力値は<a href=\"#enhance\">「強化」</a>の「レベル別の能力値」の表をご覧ください。" } ] },
+            note: "レベルごとの能力値と装着可能回数は<a href=\"#enhance\">「強化」</a>の「レベル別の能力値・装着可能回数」の表をご覧ください。" },
+          { type: "table", label: "強化チケットの配布枚数", text: "",
+            head: ["お持ちだったレベル", "1つあたりの配布"],
+            rows: [["Lv.1", "なし"], ["Lv.2", "4枚"], ["Lv.3", "12枚"], ["Lv.4", "30枚"], ["Lv.5", "60枚"]],
+            note: [] },
+          { type: "table", label: "売却価格", text: "",
+            head: ["アイテム", "1個あたりの価格"],
+            rows: [["ピース", "500コイン"], ["ピースチケット", "500コイン"], ["シルバーチケット", "2,000コイン"], ["ゴールドチケット", "3,000コイン"]],
+            note: [] } ] },
 
       { id: "faq", nav: "よくある質問", title: "よくある質問", q: "お問い合わせの多い内容をまとめました。",
         blocks: [
           { type: "faq", items: [
-            ["持っていたピースはどうなりますか？", "フリースタイルはコインで直接購入・強化する方式になったため、ピースは使用できなくなりました。キャラクターごとにお持ちのピースは<b>マネジメント › インベントリ</b>に表示され、1個500コインで売却できます。"],
-            ["リニューアル前にレベルを上げていたフリースタイルに補償はありますか？", "あります。メンテナンス開始時点でお持ちのフリースタイル1つにつき、レベルに応じて<b>モーション強化チケット</b>がインベントリに配布され、お知らせメールも送信されます（Lv.1 0枚・Lv.2 4枚・Lv.3 12枚・Lv.4 30枚・Lv.5 60枚）。チケットはポイント強化1回の代わりに使えます。"],
+            ["持っていたピースはどうなりますか？", "フリースタイルはコインで直接購入・強化する方式になったため、ピースは使用できなくなりました。キャラクターごとにお持ちのピースは<b>マネジメント › インベントリ</b>でコインに売却でき、価格は<a href=\"#legacy\">「既存の所持者」</a>の表にあります。"],
+            ["リニューアル前にレベルを上げていたフリースタイルに補償はありますか？", "あります。メンテナンス開始時点でお持ちのフリースタイルのレベルに応じて<b>モーション強化チケット</b>がインベントリに配布され、お知らせメールも送信されます。配布枚数は<a href=\"#legacy\">「既存の所持者」</a>の表にあります。チケットはポイント強化1回の代わりに使えます。"],
             ["Lv.2 だったフリースタイルは新システムで続けて強化できますか？", "はい。レベルはそのまま維持されるので、Lv.2 から始まり Lv.3 以降も続けて強化できます。"],
             ["お持ちのフリースタイルにも新しい能力値が適用されますか？", "はい。すでに強化していたフリースタイルも新しい能力値になり、サイクルに入れられる装着可能回数もレベルごとの新しい基準に変わります。"],
             ["強化に失敗するとフリースタイルは消えますか？", "いいえ。レベルはそのまま維持されます。"],
