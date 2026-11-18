@@ -14,7 +14,7 @@ window.NOTICE = {
       was: "이전 이름", replay: "처음부터 같이 보기", slow: "느리게", normal: "보통 속도",
       videoNote: "연습장에서 촬영한 미리보기 영상으로, 실제 경기 화면과 다를 수 있습니다.",
       prev: "이전", next: "다음", close: "닫기", none: "없음", photo: "사진 준비 중", mock: "개발 중 화면",
-      noResult: "검색된 프리스타일이 없습니다.", dialog: "프리스타일 영상 비교", tabs: "단원 메뉴", compareHint: "누르면 변경 전 · 후 영상 보기", statTitle: "레벨별 능력치 · 횟수", lv: "레벨", useOld: "사용 횟수", useNew: "장착 가능 회수", statDunk: "덩크 능력치는 거리에 따라 하나만 적용됩니다. 골밑 덩크는 모션 빠르기, 원거리 덩크는 수비 저항이 적용됩니다."
+      noResult: "검색된 프리스타일이 없습니다.", dialog: "프리스타일 변경 비교", tabs: "단원 메뉴", compareHint: "누르면 영상 · 능력치 비교", statTitle: "레벨별 능력치 · 횟수", lv: "레벨", useOld: "사용 횟수", useNew: "장착 가능 회수", statDunk: "덩크 능력치는 거리에 따라 하나만 적용됩니다. 골밑 덩크는 모션 빠르기, 원거리 덩크는 수비 저항이 적용됩니다."
     },
     chapters: [
       { id: "overview", nav: "바뀌는 점", title: "프리스타일이 이렇게 바뀝니다", q: "팩 · 조각 · 티켓 없이 원하는 프리스타일을 바로 구매하고, 점프슛 · 레이업 · 덩크별로 원하는 순서에 장착하실 수 있습니다.",
@@ -106,7 +106,7 @@ window.NOTICE = {
             rows: [["무릎 지옥", "중거리 슛 모션 빠르기", "+48%", "–"], ["", "3점 슛 모션 빠르기", "+40%", "–"], ["", "3점 슛 수비 저항", "–", "+8.1%"], ["", "중거리 슛 수비 저항", "–", "+8.16%"], ["레이업 덩크 · 투핸드 파워슬램 · 원핸드슬램", "골밑 덩크 모션 빠르기", "+24%", "+17.4%"], ["", "원거리 덩크 수비 저항", "–", "+22.5%"], ["메테오잼 · 가위치기 · 720도 덩크", "원거리 덩크 모션 빠르기", "+24%", "–"], ["", "원거리 덩크 수비 저항", "–", "+22.5%"], ["", "골밑 덩크 모션 빠르기", "–", "+17.4%"], ["모든 프리스타일", "Lv.5 사용 횟수", "5회 (퀵 포인트 4회)", "3회"]],
             note: ["줄어든 능력치 대신 다른 능력치가 새로 추가되거나 크게 상승했습니다.", "일부 레이업은 새로운 모션 적용으로 블록 가능 시간이 변경되었습니다. 투핸드 레이업 · 퀵 레이업 · 소프트 터치는 길어지고 360도 레이업 · 트리플 클러치는 짧아졌으며, 블록 저항은 최대 +50%까지 상승했습니다."] } ] },
 
-      { id: "dex", nav: "프리스타일 영상", title: "모션은 어떻게 바뀌었나요?", q: "프리스타일을 누르면 변경 전과 변경 후 영상을 나란히 보실 수 있습니다.",
+      { id: "dex", nav: "프리스타일별 변화", title: "프리스타일별로 무엇이 바뀌었나요?", q: "프리스타일을 누르면 변경 전 · 후 영상과 레벨별 능력치 · 장착 가능 회수를 함께 비교해 보실 수 있습니다.",
         blocks: [ { type: "dex" } ] },
 
       { id: "legacy", nav: "기존 보유자", title: "보유하고 있던 프리스타일은 어떻게 되나요?", q: "리뉴얼 전에 보유하고 계셨던 프리스타일과 아이템의 변경 사항을 안내해 드립니다.",
@@ -153,7 +153,7 @@ window.NOTICE = {
       was: "Previous name", replay: "Replay together", slow: "Slow", normal: "Normal speed",
       videoNote: "Preview footage recorded in the practice court. It may differ from actual matches.",
       prev: "Previous", next: "Next", close: "Close", none: "None", photo: "Image coming soon", mock: "In development",
-      noResult: "No Freestyles found.", dialog: "Freestyle video comparison", tabs: "Sections", compareHint: "Tap for before / after", statTitle: "Stats and limits by level", lv: "Level", useOld: "Times Used", useNew: "Equip Limit", statDunk: "Only one dunk stat applies, depending on distance: Short Distance Dunk Speed for short distance dunks and Long Distance Dunk Defense Resist for long distance dunks."
+      noResult: "No Freestyles found.", dialog: "Freestyle comparison", tabs: "Sections", compareHint: "Tap to compare video and stats", statTitle: "Stats and limits by level", lv: "Level", useOld: "Times Used", useNew: "Equip Limit", statDunk: "Only one dunk stat applies, depending on distance: Short Distance Dunk Speed for short distance dunks and Long Distance Dunk Defense Resist for long distance dunks."
     },
     chapters: [
       { id: "overview", nav: "What's New", title: "Here's How Freestyle Is Changing", q: "No more packs, pieces or tickets. Buy the Freestyle you want and set your own order for Jump Shot, Layup and Dunk.",
@@ -245,7 +245,7 @@ window.NOTICE = {
             rows: [["Knee Hell", "Mid Range Shot Release Speed", "+48%", "–"], ["", "3 Point Shot Release Speed", "+40%", "–"], ["", "3 Point Shot Defense Resist", "–", "+8.1%"], ["", "Mid Range Shot Defense Resist", "–", "+8.16%"], ["Layup Dunk · Two-Handed Power Slam · One-Handed Slam", "Short Distance Dunk Speed", "+24%", "+17.4%"], ["", "Long Distance Dunk Defense Resist", "–", "+22.5%"], ["Meteor Jam · Scissors Throw · 720 Dunk", "Long Distance Dunk Speed", "+24%", "–"], ["", "Long Distance Dunk Defense Resist", "–", "+22.5%"], ["", "Short Distance Dunk Speed", "–", "+17.4%"], ["All Freestyles", "Lv.5 use count", "5 times (Quick Point 4)", "3 slots"]],
             note: ["Where a stat went down, another stat was added or raised a lot.", "Some layups have new motions, so their block window changed. Two-Handed Layup, Quick Layup and Soft Touch got longer, while 360 Layup and Triple Clutch got shorter, and Block Resist now goes up to +50%."] } ] },
 
-      { id: "dex", nav: "Freestyle Videos", title: "How have the motions changed?", q: "Select a Freestyle to watch the before and after videos side by side.",
+      { id: "dex", nav: "By Freestyle", title: "What changed for each Freestyle?", q: "Select a Freestyle to compare its before and after videos, stats by level and Equip Limit.",
         blocks: [ { type: "dex" } ] },
 
       { id: "legacy", nav: "Current Owners", title: "What happens to my Freestyles?", q: "How the Freestyles and items you had before the Renewal will change.",
@@ -292,7 +292,7 @@ window.NOTICE = {
       was: "以前の名前", replay: "最初から一緒に見る", slow: "スロー", normal: "通常速度",
       videoNote: "練習場で撮影したプレビュー動画のため、実際の試合画面とは異なる場合があります。",
       prev: "前へ", next: "次へ", close: "閉じる", none: "なし", photo: "画像準備中", mock: "開発中の画面",
-      noResult: "該当するフリースタイルがありません。", dialog: "フリースタイル動画比較", tabs: "目次", compareHint: "タップで変更前・後の動画", statTitle: "レベル別の能力値・回数", lv: "レベル", useOld: "使用回数", useNew: "装着可能回数", statDunk: "ダンクの能力値は距離に応じて1つだけ適用されます。ショートダンクはモーション速度、ロングダンクは守備抵抗です。"
+      noResult: "該当するフリースタイルがありません。", dialog: "フリースタイル変更比較", tabs: "目次", compareHint: "タップで動画・能力値を比較", statTitle: "レベル別の能力値・回数", lv: "レベル", useOld: "使用回数", useNew: "装着可能回数", statDunk: "ダンクの能力値は距離に応じて1つだけ適用されます。ショートダンクはモーション速度、ロングダンクは守備抵抗です。"
     },
     chapters: [
       { id: "overview", nav: "変更点", title: "フリースタイルはこう変わります", q: "パック・ピース・チケットなしで欲しいフリースタイルをすぐに購入し、ジャンプシュート・レイアップ・ダンクごとに好きな順番で装着します。",
@@ -384,7 +384,7 @@ window.NOTICE = {
             rows: [["膝地獄", "ミドルシュートモーション速度", "+48%", "–"], ["", "3点シュートモーション速度", "+40%", "–"], ["", "3点シュート守備抵抗", "–", "+8.1%"], ["", "ミドルシュート守備抵抗", "–", "+8.16%"], ["レイアップダンク・ツーハンドパワースラム・ワンハンドスラム", "ショートダンクモーション速度", "+24%", "+17.4%"], ["", "ロングダンク守備抵抗", "–", "+22.5%"], ["メテオジャム・ハサミ打ち・720度ダンク", "ロングダンクモーション速度", "+24%", "–"], ["", "ロングダンク守備抵抗", "–", "+22.5%"], ["", "ショートダンクモーション速度", "–", "+17.4%"], ["すべてのフリースタイル", "Lv.5 の使用回数", "5回（クイックポイント 4回）", "3枠"]],
             note: ["下がった能力値の代わりに、別の能力値が新しく付いたり大きく上がったりしています。", "一部のレイアップは新しいモーションになり、ブロックされうる時間が変わりました。ツーハンドレイアップ・クイックレイアップ・ソフトタッチは長く、360度レイアップ・トリプルクラッチは短くなり、ブロック抵抗は最大 +50% まで上がりました。"] } ] },
 
-      { id: "dex", nav: "フリースタイル動画", title: "モーションはどう変わりましたか？", q: "フリースタイルを選ぶと、変更前と変更後の動画を並べて見られます。",
+      { id: "dex", nav: "フリースタイル別の変化", title: "フリースタイルごとに何が変わりましたか？", q: "フリースタイルを選ぶと、変更前・後の動画とレベル別の能力値・装着可能回数を比べられます。",
         blocks: [ { type: "dex" } ] },
 
       { id: "legacy", nav: "既存の所持者", title: "持っていたフリースタイルはどうなりますか？", q: "リニューアル前に持っていたフリースタイルとアイテムがどう変わるかをご案内します。",
