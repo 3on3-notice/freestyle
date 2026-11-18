@@ -14,7 +14,7 @@ window.NOTICE = {
       was: "이전 이름", replay: "처음부터 같이 보기", slow: "느리게", normal: "보통 속도",
       videoNote: "연습장에서 촬영한 미리보기 영상으로, 실제 경기 화면과 다를 수 있습니다.",
       prev: "이전", next: "다음", close: "닫기", none: "없음", photo: "사진 준비 중", mock: "개발 중 화면",
-      noResult: "찾는 프리스타일이 없습니다.", dialog: "프리스타일 영상 비교", tabs: "단원 메뉴", compareHint: "누르면 변경 전 · 후 영상", statTitle: "Lv.1 능력치", statNote: "레벨별 능력치는 강화 단원의 표를 참고하세요."
+      noResult: "찾는 프리스타일이 없습니다.", dialog: "프리스타일 영상 비교", tabs: "단원 메뉴", compareHint: "누르면 변경 전 · 후 영상", statTitle: "레벨별 능력치 · 횟수", lv: "레벨", useOld: "사용 횟수", useNew: "장착 가능 회수", statDunk: "덩크 능력치는 거리에 따라 하나만 적용됩니다. 골밑 덩크는 모션빠르기, 원거리 덩크는 수비저항입니다."
     },
     chapters: [
       { id: "overview", nav: "바뀌는 점", title: "프리스타일이 이렇게 바뀌어요", q: "팩 · 조각 · 티켓 없이 원하는 프리스타일을 바로 사고, 점프슛 · 레이업 · 덩크마다 원하는 순서로 장착합니다.",
@@ -122,7 +122,7 @@ window.NOTICE = {
       was: "Previous name", replay: "Replay together", slow: "Slow", normal: "Normal speed",
       videoNote: "Preview footage recorded in the practice court. It may differ from actual matches.",
       prev: "Previous", next: "Next", close: "Close", none: "None", photo: "Image coming soon", mock: "In development",
-      noResult: "No Freestyles found.", dialog: "Freestyle video comparison", tabs: "Sections", compareHint: "Tap for before / after", statTitle: "Lv.1 stats", statNote: "See the table in Enhance for stats at each level."
+      noResult: "No Freestyles found.", dialog: "Freestyle video comparison", tabs: "Sections", compareHint: "Tap for before / after", statTitle: "Stats and limits by level", lv: "Level", useOld: "Times Used", useNew: "Equip Limit", statDunk: "Only one dunk stat applies, depending on distance: Motion Speed for short distance dunks and Defense Resist for long distance dunks."
     },
     chapters: [
       { id: "overview", nav: "What's New", title: "Here's How Freestyle Is Changing", q: "No more packs, pieces or tickets. Buy the Freestyle you want and set your own order for Jump Shot, Layup and Dunk.",
@@ -230,7 +230,7 @@ window.NOTICE = {
       was: "以前の名前", replay: "最初から一緒に見る", slow: "スロー", normal: "通常速度",
       videoNote: "練習場で撮影したプレビュー動画のため、実際の試合画面とは異なる場合があります。",
       prev: "前へ", next: "次へ", close: "閉じる", none: "なし", photo: "画像準備中", mock: "開発中の画面",
-      noResult: "該当するフリースタイルがありません。", dialog: "フリースタイル動画比較", tabs: "目次", compareHint: "タップで変更前・後の動画", statTitle: "Lv.1 の能力値", statNote: "レベル別の能力値は「強化」の表をご覧ください。"
+      noResult: "該当するフリースタイルがありません。", dialog: "フリースタイル動画比較", tabs: "目次", compareHint: "タップで変更前・後の動画", statTitle: "レベル別の能力値・回数", lv: "レベル", useOld: "使用回数", useNew: "装着可能回数", statDunk: "ダンクの能力値は距離に応じて1つだけ適用されます。ショートダンクはモーション速度、ロングダンクは守備抵抗です。"
     },
     chapters: [
       { id: "overview", nav: "変更点", title: "フリースタイルはこう変わります", q: "パック・ピース・チケットなしで欲しいフリースタイルをすぐに購入し、ジャンプシュート・レイアップ・ダンクごとに好きな順番で装着します。",

@@ -550,6 +550,13 @@ a.mi::after{content:"";position:absolute;right:17px;top:50%;width:7px;height:7px
 .vst-c>b{display:block;font-size:12px;font-weight:700;color:var(--t3);margin-bottom:6px}
 .vst-c.aft>b{color:var(--or-d)}
 .vst-c ul{list-style:none;margin:0;padding:0}
+.vst-tw{overflow-x:auto}
+.vst-t{width:100%;border-collapse:collapse;font-size:13px;line-height:1.35}
+.vst-t th,.vst-t td{padding:6px 6px;border-bottom:1px solid var(--line2);text-align:right;white-space:nowrap}
+.vst-t thead th{font-size:11px;font-weight:700;color:var(--t3);white-space:normal;vertical-align:bottom;text-align:right}
+.vst-t th:first-child{text-align:left;color:var(--t2);font-weight:700}
+.vst-t tbody tr:last-child th,.vst-t tbody tr:last-child td{border-bottom:0}
+.vst-c.aft .vst-t td{color:var(--or-d);font-weight:700}
 .vst-c li{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;line-height:1.5;padding:3px 0}
 .vst-c li span{color:var(--t2)}
 .vst-c li em{font-style:normal;font-weight:700;white-space:nowrap}
@@ -881,13 +888,18 @@ const vids = () => Array.from(dlgB.querySelectorAll("video"));
 function statHTML(p, u) {
   const S = window.FS_STAT; if (!S || S.hold) return "";
   const nm = k => (S.names[k] && (S.names[k][L] || S.names[k].kr)) || k;
-  const li = arr => `<ul>${(arr || []).map(r => `<li><span>${esc(nm(r[0]))}</span><em>${esc(r[1])}</em></li>`).join("")}</ul>`;
-  const aft = S.after[p.grp || p.cat] || [];
-  const bef = p.isNew ? null : p.before;
-  return `<section class="vst"><h3>${esc(u.statTitle || "Lv.1")}</h3><div class="vst-g${bef ? "" : " one"}">` +
-    (bef ? `<div class="vst-c bef"><b>${esc(u.before)}</b>${li(bef)}</div>` : "") +
-    `<div class="vst-c aft"><b>${esc(u.after)}</b>${li(aft)}</div></div>` +
-    (u.statNote ? `<p class="vst-n">${esc(u.statNote)}</p>` : "") + `</section>`;
+  const f = v => "+" + (Math.round(v * 100) / 100) + "%";
+  const LV = [1, 2, 3, 4, 5];
+  // 표 하나: 머리줄 = 레벨 · 능력치들 · 횟수, 줄 = Lv.1~5
+  const tbl = (cls, cap, cols, val, uses, useLbl) =>
+    `<div class="vst-c ${cls}"><b>${esc(cap)}</b><div class="vst-tw"><table class="vst-t"><thead><tr><th scope="col">${esc(u.lv || "Lv.")}</th>${cols.map(k => `<th scope="col">${esc(nm(k))}</th>`).join("")}<th scope="col">${esc(useLbl)}</th></tr></thead><tbody>` +
+    LV.map((n, i) => `<tr><th scope="row">Lv.${n}</th>${cols.map((k, j) => `<td>${esc(val(j, i))}</td>`).join("")}<td>${esc(String(uses[i]))}</td></tr>`).join("") +
+    `</tbody></table></div></div>`;
+  const N = S.neu[p.grp || p.cat], O = p.isNew ? null : S.old[p.code];
+  const bef = O ? tbl("bef", u.before, O.s.map(x => x[0]), (j, i) => f(O.s[j][1] * (i + 1)), O.u, u.useOld || "") : "";
+  const aft = N ? tbl("aft", u.after, N.s.map(x => x[0]), (j, i) => f(N.s[j][1][i]), N.u, u.useNew || "") : "";
+  const note = p.cat === "dunk" && u.statDunk ? `<p class="vst-n">${esc(u.statDunk)}</p>` : "";
+  return `<section class="vst"><h3>${esc(u.statTitle || "")}</h3><div class="vst-g${bef ? "" : " one"}">${bef}${aft}</div>${note}</section>`;
 }
 function fillPet() {
   const p = FS[CUR], u = U();
