@@ -39,7 +39,14 @@ window.NOTICE = {
             ["구매 가격", "Lv.1 프리스타일 32,000코인 — 모든 프리스타일이 같은 가격입니다."],
             ["얻는 레벨", "Lv.1 — 이후 강화로 Lv.5 까지 올릴 수 있습니다."],
             ["구매 단위", "캐릭터마다 따로 구매합니다. 지금 선택한 캐릭터가 받습니다."],
-            ["없어지는 것", "프리스타일 팩 · 조각 · 티켓"] ] } ] },
+            ["없어지는 것", "프리스타일 팩 · 조각 · 티켓"] ] },
+          { type: "facts", photo: "shop", label: "상점에서도 구매", items: [
+            ["위치", "상점 › 프리스타일 모션에서도 같은 가격(32,000코인)으로 살 수 있습니다."] ] },
+          { type: "facts", photo: "confirm", label: "구매 확인", items: [
+            ["확인 창", "구매 전에 프리스타일 이름과 가격, 받을 캐릭터가 한 번 더 표시됩니다."] ] },
+          { type: "facts", photo: "autoequip", label: "빈 칸에 바로 장착", items: [
+            ["빈 칸이 있으면", "구매 직후 사이클의 빈 칸에 장착할지 묻습니다. 확인하면 가장 앞의 빈 칸 1곳에 들어갑니다."],
+            ["취소하거나 빈 칸이 없으면", "보유만 되며, 사이클에서 직접 장착하면 됩니다."] ] } ] },
 
       { id: "cycle", nav: "사이클", title: "사이클은 어떻게 쓰나요?", q: "점프슛 · 레이업 · 덩크마다 사이클이 하나씩 있고, 칸에 넣은 순서대로 경기에서 나갑니다.",
         blocks: [
@@ -66,6 +73,11 @@ window.NOTICE = {
             ["성공하면", "레벨이 오르고 능력치가 정해진 만큼 오릅니다(무작위 아님)."],
             ["실패하면", "레벨은 그대로이고 사용한 재화만 소모됩니다."],
             ["강화 티켓", "포인트 강화 1회를 대신하는 티켓이며, 성공 확률도 포인트 강화와 같습니다. 리뉴얼 전에 Lv.2 이상 프리스타일을 가지고 있던 분께 인벤토리로 지급됩니다(기존 보유자 참고)."] ] },
+          { type: "facts", photo: "enhanim", label: "강화 연출", items: [
+            ["건너뛰기", "강화 연출은 오른쪽 위 SKIP 으로 건너뛸 수 있습니다."] ] },
+          { type: "facts", photo: "enhresult", label: "강화 결과", items: [
+            ["성공하면", "오른 장착 가능 회수와 능력치가 표시됩니다."],
+            ["자동 닫힘", "확인을 누르지 않아도 5초 뒤 닫힙니다. '앞으로 연출 스킵'을 고르면 다음부터 연출을 건너뜁니다."] ] },
           { type: "table", label: "레벨별 능력치", text: "같은 타입이면 어떤 프리스타일이든 능력치가 같습니다. 능력치는 쌓이지 않고 지금 레벨의 값만, 그 프리스타일로 슛하는 동안에만 적용됩니다.",
             head: ["레벨", "점프슛<br><small>중거리 슛 · 3점 슛 수비저항</small>", "레이업<br><small>골밑 · 원거리 레이업 블록저항</small>", "덩크<br><small>골밑 덩크 모션빠르기 · 원거리 덩크 수비저항</small>"],
             rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%"]],
@@ -121,7 +133,14 @@ window.NOTICE = {
             ["Price", "Lv.1 Freestyles cost 32,000 Coins — the same for every Freestyle."],
             ["Starting level", "Lv.1 — enhance it up to Lv.5."],
             ["Per character", "Bought separately for each character. The character you have selected gets it."],
-            ["Removed", "Freestyle Packs · Pieces · Tickets"] ] } ] },
+            ["Removed", "Freestyle Packs · Pieces · Tickets"] ] },
+          { type: "facts", photo: "shop", label: "Buy in the Shop too", items: [
+            ["Where", "You can also buy them in Shop › Freestyle Motion for the same price (32,000 Coins)."] ] },
+          { type: "facts", photo: "confirm", label: "Purchase check", items: [
+            ["Confirm window", "Before you buy, the Freestyle, its price and the character who gets it are shown once more."] ] },
+          { type: "facts", photo: "autoequip", label: "Equip to an empty slot", items: [
+            ["If a slot is empty", "Right after buying, you are asked whether to equip it to an empty slot in your Cycle. Confirm to put it in the first empty slot."],
+            ["If you cancel or no slot is empty", "You just own it. Equip it yourself in the Cycle."] ] } ] },
 
       { id: "cycle", nav: "Cycle", title: "How does the Cycle work?", q: "Jump Shot, Layup and Dunk each have a cycle, and Freestyles come out in the order of the slots.",
         blocks: [
@@ -148,6 +167,11 @@ window.NOTICE = {
             ["Success", "Level up with fixed stat gains, not random."],
             ["Failure", "Your level stays; only the currency is used."],
             ["Motion Enhancement Ticket", "Can be used in place of Points for one enhancement, with the same success rate. Sent to the Inventory of players who owned Lv.2+ Freestyles before the Renewal (see Current Owners)."] ] },
+          { type: "facts", photo: "enhanim", label: "Enhancement animation", items: [
+            ["Skip", "You can skip the enhancement animation with SKIP at the top right."] ] },
+          { type: "facts", photo: "enhresult", label: "Enhancement result", items: [
+            ["On success", "The raised Equip Limit and stats are shown."],
+            ["Closes by itself", "It closes after 5 seconds even if you don't press Confirm. Choose Skip Animation to skip it from then on."] ] },
           { type: "table", label: "Stats by level", text: "Freestyles of the same type have the same stats. Stats don't stack: only your current level applies, and only while shooting with that Freestyle.",
             head: ["Level", "Jump Shot<br><small>Mid Range · 3 Point Shot Defense Resist</small>", "Layup<br><small>Short · Long Distance Layup Block Resist</small>", "Dunk<br><small>Short Distance Dunk Motion Speed · Long Distance Dunk Defense Resist</small>"],
             rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%"]],
@@ -203,7 +227,14 @@ window.NOTICE = {
             ["購入価格", "Lv.1 フリースタイル 32,000コイン — すべてのフリースタイルが同じ価格です。"],
             ["最初のレベル", "Lv.1 — Lv.5 まで強化できます。"],
             ["キャラクターごと", "キャラクターごとに購入します。選択中のキャラクターが受け取ります。"],
-            ["廃止", "フリースタイルパック・ピース・チケット"] ] } ] },
+            ["廃止", "フリースタイルパック・ピース・チケット"] ] },
+          { type: "facts", photo: "shop", label: "ショップでも購入", items: [
+            ["場所", "ショップ › フリースタイルモーションでも同じ価格（32,000コイン）で購入できます。"] ] },
+          { type: "facts", photo: "confirm", label: "購入の確認", items: [
+            ["確認画面", "購入前に、フリースタイル名・価格・受け取るキャラクターがもう一度表示されます。"] ] },
+          { type: "facts", photo: "autoequip", label: "空き枠にすぐ装着", items: [
+            ["空き枠があるとき", "購入直後に、サイクルの空き枠に装着するか確認されます。確認すると、いちばん前の空き枠1つに入ります。"],
+            ["キャンセルしたとき・空き枠がないとき", "所持のみとなります。サイクルで直接装着してください。"] ] } ] },
 
       { id: "cycle", nav: "サイクル", title: "サイクルはどう動きますか？", q: "ジャンプシュート・レイアップ・ダンクごとにサイクルがあり、枠の順番どおりにフリースタイルが出ます。",
         blocks: [
@@ -230,6 +261,11 @@ window.NOTICE = {
             ["成功すると", "レベルが上がり、能力値が決まった分だけ上がります（ランダムではありません）。"],
             ["失敗すると", "レベルはそのままで、使った通貨のみ消費されます。"],
             ["強化チケット", "ポイント強化1回の代わりに使えるチケットで、成功確率もポイント強化と同じです。リニューアル前に Lv.2 以上のフリースタイルをお持ちだった方のインベントリに配布されます（既存の所持者を参照）。"] ] },
+          { type: "facts", photo: "enhanim", label: "強化演出", items: [
+            ["スキップ", "強化演出は右上の SKIP でスキップできます。"] ] },
+          { type: "facts", photo: "enhresult", label: "強化結果", items: [
+            ["成功すると", "上がった装着可能回数と能力値が表示されます。"],
+            ["自動で閉じる", "確認を押さなくても5秒後に閉じます。「今後演出をスキップ」を選ぶと、次から演出をスキップします。"] ] },
           { type: "table", label: "レベル別の能力値", text: "同じタイプのフリースタイルは能力値が同じです。能力値は累積せず、現在のレベルの値のみ、そのフリースタイルでシュートする間だけ適用されます。",
             head: ["レベル", "ジャンプシュート<br><small>ミドル・3点シュート守備抵抗</small>", "レイアップ<br><small>ショート・ロングレイアップブロック抵抗</small>", "ダンク<br><small>ショートダンクモーション速度・ロングダンク守備抵抗</small>"],
             rows: [["Lv.1", "+3% · +3%", "+10%", "+4.8% · +2.7%"], ["Lv.2", "+4.8% · +4.8%", "+25%", "+8.4% · +6.3%"], ["Lv.3", "+5.76% · +5.7%", "+30%", "+10.2% · +11.7%"], ["Lv.4", "+6.6% · +6.6%", "+40%", "+13.8% · +18.9%"], ["Lv.5", "+8.16% · +8.1%", "+50%", "+17.4% · +22.5%"]],

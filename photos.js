@@ -20,5 +20,20 @@ window.PHOTOS = {
     label: { kr: "프리스타일 강화", en: "Freestyle Enhancement", jp: "フリースタイル強化" },
     cap: { kr: "포인트(10포인트) 또는 코인(20,000코인)으로 강화합니다. 성공 확률과 성공 시 능력치를 이 화면에서 확인할 수 있습니다.",
            en: "Enhance with Points (10) or Coins (20,000). The success rate and stats on success are shown on this screen.",
-           jp: "ポイント（10ポイント）またはコイン（20,000コイン）で強化します。成功確率と成功時の能力値はこの画面で確認できます。" } }
+           jp: "ポイント（10ポイント）またはコイン（20,000コイン）で強化します。成功確率と成功時の能力値はこの画面で確認できます。" } },
+  shop: { src: "img/shop.jpg?v=1118c",
+    label: {"kr": "상점에서 구매", "en": "Buy in the Shop", "jp": "ショップで購入"},
+    cap: {"kr": "상점의 프리스타일 모션 메뉴입니다.", "en": "The Freestyle Motion menu in the Shop.", "jp": "ショップのフリースタイルモーションメニューです。"} },
+  confirm: { src: "img/confirm.jpg?v=1118c",
+    label: {"kr": "구매 확인", "en": "Purchase Check", "jp": "購入の確認"},
+    cap: {"kr": "구매 전 확인 창입니다.", "en": "The window shown before you buy.", "jp": "購入前の確認画面です。"} },
+  autoequip: { src: "img/autoequip.jpg?v=1118c",
+    label: {"kr": "빈 칸에 장착", "en": "Equip to Empty Slot", "jp": "空き枠に装着"},
+    cap: {"kr": "구매 후 빈 칸에 장착할지 묻는 창입니다.", "en": "Asks whether to equip it to an empty slot after buying.", "jp": "購入後に空き枠へ装着するか確認する画面です。"} },
+  enhanim: { src: "img/enhanim.jpg?v=1118c",
+    label: {"kr": "강화 연출", "en": "Enhancement Animation", "jp": "強化演出"},
+    cap: {"kr": "강화 중 연출 화면입니다(SKIP 가능).", "en": "The enhancement animation (you can SKIP it).", "jp": "強化中の演出画面です（SKIP 可能）。"} },
+  enhresult: { src: "img/enhresult.jpg?v=1118c",
+    label: {"kr": "강화 결과", "en": "Enhancement Result", "jp": "強化結果"},
+    cap: {"kr": "강화 성공 화면입니다.", "en": "The screen after a successful enhancement.", "jp": "強化成功の画面です。"} }
 };
