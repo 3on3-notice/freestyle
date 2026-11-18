@@ -706,7 +706,7 @@ window.__phFail = img => { const box = img.parentNode; if (box) box.outerHTML = 
 
 /* ── 썸네일: 새 영상에서 뽑은 한 장(img/thumb/<code>.jpg) ── */
 const PLAY = '<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z"/></svg>';
-function iconHTML(p) { return `<img src="img/thumb/${p.code}.jpg" alt="" loading="lazy" onerror="this.remove()">`; }
+function iconHTML(p) { return `<img src="img/thumb/${p.code}.jpg?v=1118b" alt="" loading="lazy" onerror="this.remove()">`; }
 
 /* ── 블록 ── */
 const MENU_PHOTO = { "PET LINEUP": "lineup", "ADOPT PET": "adopt", "PET HOUSE": "house", "PET COMBINATION": "combination" };
@@ -889,7 +889,7 @@ function fillPet() {
   const p = FS[CUR], u = U();
   dlg.setAttribute("style", gVars(p.cat));
   const was = p.was && p.was[L];   // 이전 이름은 그 언어로 있을 때만
-  const v = (dir, cls, cap) => `<figure class="${cls}"><video src="video/${dir}/${p.code}.mp4" muted loop playsinline autoplay preload="auto"></video><figcaption>${esc(cap)}</figcaption></figure>`;
+  const v = (dir, cls, cap) => `<figure class="${cls}"><video src="video/${dir}/${p.code}.mp4?v=1118b" muted loop playsinline autoplay preload="auto"></video><figcaption>${esc(cap)}</figcaption></figure>`;
   dlgB.innerHTML =
     `<div class="vc-top"><span class="gbadge"><i></i>${esc(u.grade[p.cat] || "")}</span>${p.isNew ? ` <span class="gbadge" style="--gd:#fff;--gb:#FF4D6D">${esc(u.isNew)}</span>` : ""}<h2 id="dlgT">${esc(petName(p))}</h2>${was ? `<p class="alt">${esc(u.was)}: ${esc(was)}</p>` : ""}</div>` +
     (p.isNew
