@@ -5,7 +5,7 @@
    이름 = 게임 텍스트(조각 아이템 이름에서 '조각'을 뺀 것, 2026-11-17 확인). 신규 3종 한글·영문은 기획 확정(11/18), 일본어는 공식 이름이 없어 임시 표기(확인되면 교체). */
 window.FREESTYLES = [
   { code: 30001, cat: "jump",  kr: "무릎 지옥", was: { kr: "무릎 차기" }, en: "Knee Hell", jp: "膝地獄", before: [["mid_spd", "+9.6%"], ["tp_spd", "+8%"]] },
-  { code: 30002, cat: "jump",  kr: "스파이크 슛", en: "Spike Shot", jp: "スパイクシュート", before: [["mid_blk", "+1.5%"], ["tp_blk", "+1.5%"]] },
+  { code: 30002, cat: "jump",  kr: "스파이크 슛", en: "Spike shot", jp: "スパイクシュート", before: [["mid_blk", "+1.5%"], ["tp_blk", "+1.5%"]] },
   { code: 30003, cat: "jump",  kr: "퀵 포인트1", en: "Quick Point1", jp: "クイックポイント1", before: [["mid_def", "+0.36%"], ["tp_def", "+0.18%"]], grp: "quick" },
   { code: 30004, cat: "jump",  kr: "퀵 포인트2", en: "Quick Point2", jp: "クイックポイント2", before: [["mid_def", "+0.36%"], ["tp_def", "+0.18%"]], grp: "quick" },
   { code: 30005, cat: "jump",  kr: "비하인드 슛", en: "Behind Shot", jp: "ビハインドシュート", before: [["mid_def", "+0.36%"], ["tp_def", "+0.18%"]] },
