@@ -181,6 +181,8 @@ a.mi::after{content:"";position:absolute;right:17px;top:50%;width:7px;height:7px
 .t thead th{background:#F9FAFB;color:var(--t2);font-weight:600;font-size:13px}
 .t tbody th{text-align:left;font-weight:600;white-space:nowrap}
 .t td{color:var(--t2)}
+.t.grid th,.t.grid td{border:1px solid var(--line)}
+.t.grid tbody th{background:#FAFAFB;white-space:normal;min-width:150px}
 .gdot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--g,var(--t4));margin-right:6px;vertical-align:1px}
 
 /* 작은 칸(정의 목록) */
@@ -762,8 +764,10 @@ const R = {
     return `<div class="blk">${head}${fig}${noteHTML(b.note)}</div>`;
   },
   alert: b => `<div class="alert"><span class="ic" aria-hidden="true">!</span><div>${b.text || ""}${b.photo ? photoHTML(b.photo) : ""}</div></div>`,
-  table: b => box(b, `${descHTML(b.text)}<div class="tw"><table class="t"><thead><tr>${(b.head || []).map(h => `<th scope="col">${h}</th>`).join("")}</tr></thead><tbody>${(b.rows || []).map(r =>
-    `<tr>${r.map((c, j) => { if (j) return `<td>${c}</td>`; const k = gradeOf(c); return `<th scope="row">${k ? `<i class="gdot" style="${gVars(k)}"></i>` : ""}${c}</th>`; }).join("")}</tr>`).join("")}</tbody></table></div>${noteHTML(b.note)}`),
+  // 첫 칸이 "" 인 행은 위 행의 첫 칸과 합친다(rowspan). grid: true 면 모든 칸을 사각형 테두리로(2026-11-18 사용자 지시)
+  table: b => { const R = b.rows || [], span = i => { let n = 1; while (R[i + n] && R[i + n][0] === "") n++; return n; };
+    return box(b, `${descHTML(b.text)}<div class="tw"><table class="t${b.grid ? " grid" : ""}"><thead><tr>${(b.head || []).map(h => `<th scope="col">${h}</th>`).join("")}</tr></thead><tbody>${R.map((r, i) =>
+    `<tr>${r.map((c, j) => { if (j) return `<td>${c}</td>`; if (c === "" && i) return ""; const k = gradeOf(c), n = span(i); return `<th scope="row"${n > 1 ? ` rowspan="${n}"` : ""}>${k ? `<i class="gdot" style="${gVars(k)}"></i>` : ""}${c}</th>`; }).join("")}</tr>`).join("")}</tbody></table></div>${noteHTML(b.note)}`); },
   facts: b => { const nums = pinNums(b.marks);
     // 번호는 항목 이름 뒤에 작게('화면 구성 ①') — 항목 이름은 모두 같은 위치에서 시작(10/28 피드백)
     return box(b, `${descHTML(b.text)}<dl class="facts${nums.some(Boolean) ? " pn" : ""}">${(b.items || []).map((f, i) => `<div><dt>${f[0] || ""}${nums[i] ? `<span class="pnum">${nums[i]}</span>` : ""}</dt><dd>${f[1] || ""}</dd></div>`).join("")}</dl>${noteHTML(b.note)}`); },
